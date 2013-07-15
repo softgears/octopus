@@ -11,7 +11,7 @@
 	src: url(../fonts/calibri.ttf)
 
 $header_color: #ededed
-$header-width: 930px
+$header-width: 1080px
 $body_color: #ececec
 
 $btn-order-call-height: 42px
@@ -75,25 +75,13 @@ body
 header
 	width: $header-width
 	margin: 0 auto
-
-	.header-left,.header-right
-		width: 65px
-		height: 117px
-
-	.header-left
-		background:
-			image: image-url("header-left-corner.png", false, false)
-
-	.header-right
-		background:
-			image: image-url('header-right-corner.png', false, false)
+	background:
+		image: image-url('header.png', false, false)
 
 	.header-center
-		background:
-			image: image-url('header-bg.png', false, false)
-
+		padding-left: 65px
 		vertical-align: top
-		width: 800px
+		width: 950px
 		height: 117px
 
 		.logo
@@ -232,27 +220,14 @@ header
 
 /* FOOTER START */
 footer
-	width: $header-width
-	margin: 70px auto 0
+	width: 850px
+	margin: 10px auto 0
 	position: relative
-
-	.footer-left,.footer-right
-		width: 52px
-		height: 94px
-
-	.footer-left
-		background:
-			image: image-url("footer-left-corner.png", false, false)
-
-	.footer-right
-		background:
-			image: image-url('footer-right-corner.png', false, false)
+	background:
+		image: image-url('footer.png', false, false)
+		repeat: no-repeat
 
 	.footer-center
-		background:
-			image: image-url('footer-bg.png', false, false)
-			repeat: repeat-x
-
 		padding-top: 20px
 		vertical-align: top
 		width: 800px
@@ -263,14 +238,15 @@ footer
 		float: left
 		font:
 			size: 15px
-			family: "Mariad Pro"
+
+		padding: 10px 0 0 40px
 
 		line-height: 1.3em
 
 	.footer-info-right
 		float: right
 		text-align: center
-		margin-right: 10px
+		margin-right: 60px
 
 	.footer-order-call
 		.btn-corner
@@ -857,7 +833,7 @@ $btn-counter-height: 47px
 				weight: bold
 
 			.wrap-doors
-				padding-top: 10px
+				padding-top: 30px
 
 				li
 					vertical-align: middle
@@ -881,7 +857,7 @@ $btn-counter-height: 47px
 
 			.left-handler, .right-handler
 				position: absolute
-				top: 280px
+				top: 240px
 				width: 43px
 				height: 43px
 
@@ -891,7 +867,7 @@ $btn-counter-height: 47px
 					image: image-url('carousel-handler-left.png', false, false)
 
 			.right-handler				
-				right: 90px
+				right: 40px
 				z-index: 3
 				background:
 					image: image-url('carousel-handler-right.png', false, false)
