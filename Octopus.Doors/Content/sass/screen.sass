@@ -6,6 +6,9 @@
 @import compass/reset
 @import compass/css3
 
+@font-face
+	font-family: Calibri
+	src: url(../fonts/calibri.ttf)
 
 $header_color: #ededed
 $header-width: 930px
@@ -15,6 +18,7 @@ $btn-order-call-height: 42px
 $btn-order-call-footer-height: 28px
 $red-text-color: #fe3300
 $dark-green-text-color: #43525a
+$font-family: Calibri
 
 .wrap-inline
 	word-spacing: -3px
@@ -33,11 +37,17 @@ $dark-green-text-color: #43525a
 .red-text
 	color: $red-text-color
 
+.dark-green-text
+	color: $dark-green-text-color
+
 .title
 	color: $dark-green-text-color
 	font:
 		size: 40px
 		weight: bold
+		family: Impact
+
+	letter-spacing: 1px
 
 	margin: 20px 0
 
@@ -56,7 +66,7 @@ body
 		color: $header_color
 
 	font:
-		family: Arial, sans-serif
+		family: $font-family, Arial, sans-serif
 		size: 12px
 
 	overflow-x: hidden
@@ -95,6 +105,8 @@ header
 			margin:
 				top: 20px
 				left: 2px
+			font-family: Impact
+			letter-spacing: 1px
 
 		.header-info
 			text-align: center
@@ -102,40 +114,46 @@ header
 			margin:
 				top: 5px
 
+			.need-help-phone
+				font-family: $font-family
+				letter-spacing: 1px
+
+				.prefix-phone
+					font-size: 26px
+
+				.phone
+					font-size: 36px
+
 			.need-help
 				color: $red-text-color
-				font-size: 22px
+				font:
+					size: 24px
+					family: Myriad Pro
+
 
 			.order-call
-				.btn-corner
-					width: 10px
-					height: $btn-order-call-height
+				background:
+					image: image-url('btn-order-call.png', false, false)
+					repeat: no-repeat
+				margin-left: 10px
 
 				.btn-center
-					background:
-						image: image-url('btn-order-call-bg.png', false, false)
-						repeat: repeat-x
-
 					color: $red-text-color
 					font:
-						size: 18px
+						size: 19px
+						family: $font-family
 
 					height: $btn-order-call-height
 					text-decoration: underline
-					padding: 6px 30px 0
+					margin: 10px 0 0 -20px
 					vertical-align: top
-
-				.btn-left
-					background:
-						image: image-url('btn-order-call-left-bg.png', false, false)
-
-				.btn-right
-					background:
-						image: image-url('btn-order-call-right-bg.png', false, false)
 
 .need-help-time-work
 	color: $dark-green-text-color
-	font-size: 14px
+	font:
+		size: 18px
+		family: $font-family
+
 	padding: 5px 0
 
 /* HEADER END */
@@ -253,6 +271,7 @@ footer
 	.footer-info-right
 		float: right
 		text-align: center
+		margin-right: 10px
 
 	.footer-order-call
 		.btn-corner
@@ -301,6 +320,9 @@ footer
 
 		.social-item-fb
 			margin-left: 3px
+
+	.need-help-time-work
+		font-size: 14px
 
 /* FOOTER END */
 
@@ -401,8 +423,8 @@ footer
 
 			.benefits-list-item
 				font:
-					size: 16px
-				line-height: 1.4em
+					size: 19px
+				line-height: 1.2em
 				margin: 25px 0
 
 				img
@@ -422,12 +444,13 @@ $btn-counter-height: 47px
 
 .first-block-after-menu-form
 	vertical-align: top
-	margin-left: 20px
+	margin-left: 10px
 
 	.btn-counter
 		margin:
 			top: 50px
 			bottom: 30px
+			left: 5px
 
 		.btn-corner
 			width: 6px
@@ -443,7 +466,7 @@ $btn-counter-height: 47px
 
 			height: $btn-counter-height
 			text-decoration: none
-			padding: 12px 105px 0
+			padding: 14px 113px 0
 			vertical-align: top
 
 		.btn-left
@@ -462,16 +485,19 @@ $btn-counter-height: 47px
 		text-align: center
 		padding: 5px
 
+		h2
+			font-family: Impact
+
 		.red-text
 			font:
-				size: 26px
+				size: 31px
 				weight: bold
-
+			letter-spacing: 1px
 			margin: 0 0 5px
 
 		.text
 			font:
-				size: 14px
+				size: 15px
 				weight: bold
 
 			line-height: 1.2em
@@ -490,33 +516,24 @@ $btn-counter-height: 47px
 		$btn-order2-height: 55px
 
 		.btn-order2
-			.btn-corner
-				width: 11px
-				height: $btn-order2-height
+			width: 218px
+			height: 59px
+			margin: 0 auto
+
+			background:
+				image: image-url('btn-order.png', false, false)
+				repeat: no-repeat
 
 			.btn-center
-				background:
-					image: image-url('btn-order-bg2.png', false, false)
-					repeat: repeat-x
-
 				color: #fff
 				font:
-					size: 25px
+					family: Impact
+					size: 23px
 					weight: bold
 
-				height: $btn-order2-height
 				text-decoration: none
-				padding: 12px 10px 0
+				padding: 14px 10px 0
 				vertical-align: top
-
-			.btn-left
-				background:
-					image: image-url('btn-order-left-bg.png', false, false)
-
-			.btn-right
-				background:
-					image: image-url('btn-order-right-bg.png', false, false)
-
 
 
 .cool-doors-description
@@ -524,7 +541,7 @@ $btn-counter-height: 47px
 	padding-top: 50px
 
 	.wrap-cool-doors-description
-		width: 900px
+		width: 930px
 		margin: 0 auto
 		height: 345px
 		position: relative
@@ -548,8 +565,9 @@ $btn-counter-height: 47px
 
 	.description-title	
 		font:
-			size: 30px
+			size: 38px
 			weight: bold
+			family: Impact
 
 	.description-list
 		.description-list-item
@@ -582,8 +600,10 @@ $btn-counter-height: 47px
 
 	.reasons-title
 		font:
-			size: 34px
+			size: 38px
 			weight: bold
+			family: Impact
+		letter-spacing: 1px
 
 	.reasons-list
 		margin: 20px 0 0 70px
@@ -742,6 +762,9 @@ $btn-counter-height: 47px
 		width: 1000px
 		margin: 0 auto
 
+		.trust-block-title
+			margin-left: 30px
+
 		.wrap-carousel
 			position: relative
 			padding: 0 30px
@@ -872,7 +895,7 @@ $btn-counter-height: 47px
 					image: image-url('carousel-handler-right.png', false, false)
 	
 	.first-block-after-menu-form
-		margin-left: 150px
+		margin-left: 100px
 
 		.wrap-form
 			.btn-order2
@@ -956,7 +979,6 @@ $btn-counter-height: 47px
 	width: 312px !important
 	background: url(../img/standart/form-border.png) top center no-repeat
 	padding: 5px
-	margin-left: 23px
 
 	.wrap-form
 		margin: 5px
