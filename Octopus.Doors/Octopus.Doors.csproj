@@ -118,6 +118,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\img\10reasonbg.png" />
     <Content Include="Content\img\border-bottom.png" />
     <Content Include="Content\img\btn-counter-bg.png" />
     <Content Include="Content\img\btn-counter-left-bg.png" />
@@ -190,6 +191,7 @@
     <Content Include="Content\img\sale-icon.png" />
     <Content Include="Content\img\social-bg.png" />
     <Content Include="Content\img\standart\buy-btn.png" />
+    <Content Include="Content\img\standart\compare.png" />
     <Content Include="Content\img\standart\door.png" />
     <Content Include="Content\img\standart\form-border.png" />
     <Content Include="Content\img\standart\guarantee.png" />
