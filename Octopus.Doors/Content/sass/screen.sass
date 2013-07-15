@@ -1,0 +1,1030 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import compass/reset
+@import compass/css3
+
+
+$header_color: #ededed
+$header-width: 930px
+$body_color: #ececec
+
+$btn-order-call-height: 42px
+$btn-order-call-footer-height: 28px
+$red-text-color: #fe3300
+$dark-green-text-color: #43525a
+
+.wrap-inline
+	word-spacing: -3px
+	letter-spacing: -3px
+	font-size: 0
+
+.inline
+	display: inline-block
+	word-spacing: normal
+	letter-spacing: normal
+
+.btn
+	cursor: pointer
+	word-spacing: 0 !important
+
+.red-text
+	color: $red-text-color
+
+.title
+	color: $dark-green-text-color
+	font:
+		size: 40px
+		weight: bold
+
+	margin: 20px 0
+
+strong
+	font:
+		weight: bold
+
+h1
+	font:
+		size: 30px
+
+	color: #000
+
+body
+	background:
+		color: $header_color
+
+	font:
+		family: Arial, sans-serif
+		size: 12px
+
+	overflow-x: hidden
+
+/* HEADER START */
+
+header
+	width: $header-width
+	margin: 0 auto
+
+	.header-left,.header-right
+		width: 65px
+		height: 117px
+
+	.header-left
+		background:
+			image: image-url("header-left-corner.png", false, false)
+
+	.header-right
+		background:
+			image: image-url('header-right-corner.png', false, false)
+
+	.header-center
+		background:
+			image: image-url('header-bg.png', false, false)
+
+		vertical-align: top
+		width: 800px
+		height: 117px
+
+		.logo
+			margin: 10px 0 0 -50px
+
+		.logo-slogan
+			vertical-align: top
+			margin:
+				top: 20px
+				left: 2px
+
+		.header-info
+			text-align: center
+			float: right
+			margin:
+				top: 5px
+
+			.need-help
+				color: $red-text-color
+				font-size: 22px
+
+			.order-call
+				.btn-corner
+					width: 10px
+					height: $btn-order-call-height
+
+				.btn-center
+					background:
+						image: image-url('btn-order-call-bg.png', false, false)
+						repeat: repeat-x
+
+					color: $red-text-color
+					font:
+						size: 18px
+
+					height: $btn-order-call-height
+					text-decoration: underline
+					padding: 6px 30px 0
+					vertical-align: top
+
+				.btn-left
+					background:
+						image: image-url('btn-order-call-left-bg.png', false, false)
+
+				.btn-right
+					background:
+						image: image-url('btn-order-call-right-bg.png', false, false)
+
+.need-help-time-work
+	color: $dark-green-text-color
+	font-size: 14px
+	padding: 5px 0
+
+/* HEADER END */
+
+/* BLOCK AFTER HEADER :) */
+.wrap-round-icons
+	margin-top: 10px
+	text-align: center
+	border:
+		bottom: 8px solid #cacbcc
+
+	padding:
+		bottom: 30px
+
+	.pin
+		text-align: center
+		margin: 0 20px
+		font:
+			weight: bold
+
+/* END BLOCK AFTER HEADER */
+
+/* MENU START */
+.wrap-main-nav
+	text-align: center
+	margin:
+		bottom: -21px
+		top: -30px
+
+	.main-nav
+		background:
+			image: image-url('main-nav-bg.png', false, false)
+			repeat: repeat-x
+
+		vertical-align: top
+		height: 51px
+		width: 900px
+
+		a
+			color: #6d6e70
+			font:
+				size: 20px
+
+			display: block
+			float: left
+			padding:
+				top: 12px
+
+			text-decoration: none
+
+		.separete
+			background:
+				color: #aeafaf
+
+			display: block
+			float: left
+			text-indent: -9999px
+			width: 2px
+			height:	39px
+			margin: 3px 8px
+
+	.first
+		height: 51px
+		width: 9px
+		background:
+			image: image-url('main-nav-left-bg.png', false, false)
+			repeat: no-repeat
+
+	.last
+		height: 51px
+		width: 14px
+		background:
+			image: image-url('main-nav-right-bg.png', false, false)
+			repeat: no-repeat
+
+/* MENU END */
+
+/* FOOTER START */
+footer
+	width: $header-width
+	margin: 70px auto 0
+	position: relative
+
+	.footer-left,.footer-right
+		width: 52px
+		height: 94px
+
+	.footer-left
+		background:
+			image: image-url("footer-left-corner.png", false, false)
+
+	.footer-right
+		background:
+			image: image-url('footer-right-corner.png', false, false)
+
+	.footer-center
+		background:
+			image: image-url('footer-bg.png', false, false)
+			repeat: repeat-x
+
+		padding-top: 20px
+		vertical-align: top
+		width: 800px
+		height: 74px
+
+	.footer-info-left
+		color: $dark-green-text-color
+		float: left
+		font:
+			size: 15px
+			family: "Mariad Pro"
+
+		line-height: 1.3em
+
+	.footer-info-right
+		float: right
+		text-align: center
+
+	.footer-order-call
+		.btn-corner
+			width: 6px
+			height: $btn-order-call-footer-height
+
+		.btn-center
+			background:
+				image: image-url('btn-order-call-footer-bg.png', false, false)
+				repeat: repeat-x
+
+			color: #ed1c24
+			font:
+				size: 14px
+
+			height: $btn-order-call-footer-height
+			text-decoration: none
+			padding: 5px 30px 0
+			vertical-align: top
+
+		.btn-left
+			background:
+				image: image-url('btn-order-call-footer-left-bg.png', false, false)
+
+		.btn-right
+			background:
+				image: image-url('btn-order-call-footer-right-bg.png', false, false)
+
+	.socialbox
+		background:
+			image: image-url('social-bg.png', false, false)
+		position: absolute
+		padding-left: 33px
+		height: 40px 
+		top: -20px
+		right: 100px
+		z-index: -1
+		width: 150px
+
+		.socialbox-item
+			margin-right: 15px
+			width: 17px
+			height: 17px
+			display: block
+			float: left
+
+		.social-item-fb
+			margin-left: 3px
+
+/* FOOTER END */
+
+
+.blue-green-gradient-block
+	background: #63c2cf
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYzYzJjZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2UyZThlOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2N2MyY2UiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+	background: -moz-linear-gradient(left,  #63c2cf 0%, #e2e8e9 50%, #67c2ce 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#63c2cf), color-stop(50%,#e2e8e9), color-stop(100%,#67c2ce)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #63c2cf 0%,#e2e8e9 50%,#67c2ce 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #63c2cf 0%,#e2e8e9 50%,#67c2ce 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #63c2cf 0%,#e2e8e9 50%,#67c2ce 100%) /* IE10+ */
+	background: linear-gradient(to right,  #63c2cf 0%,#e2e8e9 50%,#67c2ce 100%) /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63c2cf', endColorstr='#67c2ce',GradientType=1 ) /* IE6-8 */
+
+	.border-bottom
+		height: 35px
+		background:
+			image: image-url('border-bottom.png', false, false)
+
+	.block-with-circle
+		margin: 0 auto
+		width: 900px
+		height: 480px
+		padding: 0 20px 0 70px
+		background:
+			image: image-url('circle-bg.png', false, false)
+
+.first-block-after-menu
+	height: 450px
+	padding: 50px 0
+
+	
+	.first-block-after-menu-doors
+		position: relative
+
+		.wrap-carousel
+			position: relative
+			padding: 20px 0 10px
+			font:
+				weight: bold
+
+			.wrap-doors
+				padding-top: 10px
+
+				li
+					vertical-align: middle
+					position: relative
+
+				.li-left
+					margin: 70px 0 0 0 
+
+				.li-active
+					margin-left: -15px
+					z-index: 2
+
+				.li-right
+					margin: 70px 0 0 -55px
+					z-index: 1
+
+			.handler
+				width: 19px
+				height: 10px
+				cursor: pointer
+
+			.top-handlers
+				position: absolute
+				top: 0
+				left: 120px
+				text-align: center
+				white-space: nowrap
+
+			.bottom-handlers
+				position: absolute
+				bottom: 0
+				left: 150px
+
+			.left-handler, .right-handler
+				position: absolute
+				top: 200px
+				width: 43px
+				height: 43px
+
+			.left-handler
+				left: 30px
+				background:
+					image: image-url('carousel-handler-left.png', false, false)
+
+			.right-handler				
+				right: 30px
+				z-index: 3
+				background:
+					image: image-url('carousel-handler-right.png', false, false)
+	
+		.benefits-list
+			width: 205px
+
+			.benefits-list-item
+				font:
+					size: 16px
+				line-height: 1.4em
+				margin: 25px 0
+
+				img
+					float: left
+					margin-right: 5px
+
+		.sale-icon
+			position: absolute
+			top: 20px
+			right: 0
+
+	.wrap-benefits
+		vertical-align: bottom
+		margin-left: 20px
+
+$btn-counter-height: 47px
+
+.first-block-after-menu-form
+	vertical-align: top
+	margin-left: 20px
+
+	.btn-counter
+		margin:
+			top: 50px
+			bottom: 30px
+
+		.btn-corner
+			width: 6px
+			height: $btn-counter-height
+
+		.btn-center
+			background:
+				image: image-url('btn-counter-bg.png', false, false)
+				repeat: repeat-x
+
+			font:
+				size: 20px
+
+			height: $btn-counter-height
+			text-decoration: none
+			padding: 12px 105px 0
+			vertical-align: top
+
+		.btn-left
+			background:
+				image: image-url('btn-counter-left-bg.png', false, false)
+
+		.btn-right
+			background:
+				image: image-url('btn-counter-right-bg.png', false, false)
+
+	.wrap-form
+		background:
+			color: #77c5aa
+
+		+border-radius(10px)
+		text-align: center
+		padding: 5px
+
+		.red-text
+			font:
+				size: 26px
+				weight: bold
+
+			margin: 0 0 5px
+
+		.text
+			font:
+				size: 14px
+				weight: bold
+
+			line-height: 1.2em
+
+		.form-order
+			color: $dark-green-text-color
+			font:
+				size: 16px
+
+			text-align: left
+			margin: 10px
+
+			input
+				width: 100%
+
+		$btn-order2-height: 55px
+
+		.btn-order2
+			.btn-corner
+				width: 11px
+				height: $btn-order2-height
+
+			.btn-center
+				background:
+					image: image-url('btn-order-bg2.png', false, false)
+					repeat: repeat-x
+
+				color: #fff
+				font:
+					size: 25px
+					weight: bold
+
+				height: $btn-order2-height
+				text-decoration: none
+				padding: 12px 10px 0
+				vertical-align: top
+
+			.btn-left
+				background:
+					image: image-url('btn-order-left-bg.png', false, false)
+
+			.btn-right
+				background:
+					image: image-url('btn-order-right-bg.png', false, false)
+
+
+
+.cool-doors-description
+	color: $dark-green-text-color
+	padding-top: 50px
+
+	.wrap-cool-doors-description
+		width: 900px
+		margin: 0 auto
+		height: 345px
+		position: relative
+
+		.duga
+			bottom: -79px
+			left: -100px
+			z-index: 1
+
+	.cool-doors
+		width: 350px
+		position: relative
+		z-index: 2
+
+	.cool-doors-line
+		position: absolute
+		top: 30px
+		left: 110px
+		width: 667px
+		height: 246px
+
+	.description-title	
+		font:
+			size: 30px
+			weight: bold
+
+	.description-list
+		.description-list-item
+			font-size: 16px
+			margin: 15px 0
+			line-height: 1.5em
+
+	.left-descriptions
+		text-align: left
+		vertical-align: top
+		width: 280px
+		margin-top: 10px
+
+	.right-descriptions
+		text-align: right
+		vertical-align: top
+		margin:
+			top: 10px
+			left: 15px
+
+
+
+.reasons
+	padding: 100px 0 0
+
+	.block-with-circle
+		height: auto
+		padding: 0 20px 50px 70px
+		position: relative
+
+	.reasons-title
+		font:
+			size: 34px
+			weight: bold
+
+	.reasons-list
+		margin: 20px 0 0 70px
+
+		.reasons-list-item
+			font: 
+				size: 14px
+
+			line-height: 1.3em
+			margin: 10px 0
+
+			.reason-list-item-img
+				float: left
+				margin-right: 10px
+
+
+.how-we-works
+	position: relative
+	top: -60px
+
+	.wrap-how-we-works
+		width: 1000px
+		margin: 0 auto
+		position: relative
+		text-align: center
+
+		.how-we-works-item
+			position: absolute
+			text-align: left
+			line-height: 1.4em
+			width: 300px
+			font:
+				size: 14px
+				weight: bold
+
+			.underline
+				text-decoration: underline
+
+			&.item1
+				top: 50px
+				right: -70px
+
+			&.item2
+				top: 220px
+				right: -130px
+
+			&.item3
+				top: 400px
+				right: -60px
+
+			&.item4
+				bottom: -40px
+				right: 320px
+
+			&.item5
+				top: 390px
+				left: -60px
+
+			&.item6
+				top: 220px
+				left: -100px
+
+			&.item7
+				top: 50px
+				left: -40px
+
+
+.video-block
+	margin-top: 80px
+	text-align: center
+
+	.video-block-title
+		font:
+			size: 34px
+
+	.wrap-video-block
+		width: 900px
+		margin: 0 auto
+
+		.video-benefits-list
+			vertical-align: top
+			text-align: left
+			margin-left: 40px
+
+			.video-benefits-list-item
+				line-height: 1.4em
+				margin: 20px 0
+				font:
+					size: 18px
+			
+
+
+.response-block
+	margin-top: 40px
+	padding-bottom: 65px
+	background:
+		image: image-url('wizard-circle-bg.png', false, false)
+
+	.wrap-response-block
+		position: relative
+		width: 900px
+		margin: 0 auto
+		padding: 0 50px
+
+		.handler
+			position: absolute
+			width: 20px
+			height: 40px
+			top: 225px
+
+		.handler-left
+			left: 0
+			background:
+				image: image-url('response-carousel-left-handler.png', false, false)
+
+		.handler-right
+			right: 0
+			background:
+				image: image-url('response-carousel-right-handler.png', false, false)
+
+	.response-item
+		background: $body_color
+		border: 1px solid #000
+		+border-radius(10px)
+		padding: 10px
+		margin: 15px 0
+		vertical-align: top
+
+		.response-item-img
+			width: 90px
+			height: 90px
+			margin-right: 30px
+
+		.response-item-text
+			vertical-align: top
+			line-height: 1.4em
+			height: 90px
+			width: 740px
+			font:
+				size: 18px
+			position: relative
+
+			.subscribtion
+				width: 740px
+				position: absolute
+				bottom: -12px
+				left: 0
+
+				.player
+					float: right
+
+
+
+.trust-block
+	.wrap-trust-block
+		width: 1000px
+		margin: 0 auto
+
+		.wrap-carousel
+			position: relative
+			padding: 0 30px
+			width: 900px
+
+			.carousel
+				background:
+					color: #fff
+				+border-radius(10px)
+				padding: 10px
+				text-align: center
+
+				.carousel-item
+					margin-right: 20px
+					vertical-align: middle
+
+				.carouse-item-last
+					margin-right: 0
+
+			.handler
+				position: absolute
+				width: 20px
+				height: 40px
+				top: 20px
+
+			.handler-left
+				left: 0
+				background:
+					image: image-url('response-carousel-left-handler.png', false, false)
+
+			.handler-right
+				right: 0
+				background:
+					image: image-url('response-carousel-right-handler.png', false, false)
+
+
+.models-doors
+	margin-top: 30px
+
+	.duga
+		top: -20px
+		left: -150px
+
+	.block-with-circle
+		position: relative
+		padding: 50px 30px 30px 30px
+
+		.models-doors-title
+			position: absolute
+			top: 0px
+			left: 390px
+
+		.wrap-round-icons
+			margin-top: 100px
+			border: none
+
+			.pin
+				vertical-align: top
+
+				figcaption
+					line-height: 1.4em
+					font:
+						size: 16px
+
+
+
+.our-documents
+	height: 450px
+	padding: 50px 0
+
+	.wrap-our-documents
+		margin: 0 auto
+		width: 900px
+		height: 480px
+		padding: 0 20px 0 70px
+
+		.our-documents-title
+			font:
+				size: 45px
+
+	.first-block-after-menu-doors
+		position: relative
+
+		.wrap-carousel
+			position: relative
+			padding: 20px 0 10px
+			font:
+				weight: bold
+
+			.wrap-doors
+				padding-top: 10px
+
+				li
+					vertical-align: middle
+					position: relative
+
+				.li-left
+					margin: 70px 0 0 0 
+
+				.li-active
+					margin-left: -15px
+					z-index: 2
+
+				.li-right
+					margin: 70px 0 0 -55px
+					z-index: 1
+
+			.handler
+				width: 19px
+				height: 10px
+				cursor: pointer
+
+			.left-handler, .right-handler
+				position: absolute
+				top: 280px
+				width: 43px
+				height: 43px
+
+			.left-handler
+				left: 30px
+				background:
+					image: image-url('carousel-handler-left.png', false, false)
+
+			.right-handler				
+				right: 90px
+				z-index: 3
+				background:
+					image: image-url('carousel-handler-right.png', false, false)
+	
+	.first-block-after-menu-form
+		margin-left: 150px
+
+		.wrap-form
+			.btn-order2
+				.btn-center
+					font:
+						size: 20px
+					padding-top: 14px
+
+.duga
+	background:
+		image: image-url('duga-bg.png', false, false)
+
+	width: 1200px
+	height: 98px
+	position: absolute
+
+#main-menu
+	position: relative
+	z-index: 1000
+
+.standart-door-header
+	position: relative
+
+	.door
+		display: inline-block
+		vertical-align: top
+		width: 145px
+
+		.images
+			text-align: center
+
+			.row1
+				margin-top: 5px
+
+			.row2
+				margin-top: 12px
+
+	.door-info
+		display: inline-block
+		vertical-align: top
+		width: 325px
+		margin-left: 48px
+		margin-top: 75px
+
+		.header
+			font-size: 43px
+			font-family: Impact
+			color: #49535a
+
+		.desc
+			margin-top: 30px
+			font-size: #43525a
+			line-height: 1.3
+			font-size: 20px
+
+	.buy-block
+		width: 721px
+		height: 136px
+		position: absolute
+		background: url(../img/standart/price.png) left top no-repeat
+		text-align: right
+		left: 351px
+		top: 280px
+		z-index: 999
+
+		.buy-btn
+			display: inline-block
+			width: 140px
+			height: 33px
+			background: url(../img/standart/buy-btn.png) left top no-repeat
+			cursor: pointer
+			color: white
+			font-size: 25px
+			font-weight: bold
+			line-height: 33px
+			text-align: center
+			margin-right: 85px
+			margin-top: 95px
+
+.form-border
+	width: 312px !important
+	background: url(../img/standart/form-border.png) top center no-repeat
+	padding: 5px
+	margin-left: 23px
+
+	.wrap-form
+		margin: 5px
+		margin-top: 0px !important
+		background-color: #94c4ab
+
+		.form-header
+			font-size: 30px
+			font-family: Impact
+			color: #49535a
+
+		label
+			font-size: 19px
+			margin-top: 5px
+
+.standart-door-footer
+
+	.wrap-cool-doors-description
+		height: auto
+
+		.duga
+			bottom: -129px
+
+	.standart-desc-header
+		text-align: center
+		font-size: 34pt
+		font-family: Impact
+		color: #49535a
+
+	.benefits-list
+		width: 656px
+		margin: 60px auto
+
+		.benefits-list-item
+			margin: 17px 0px
+			clear: both
+			height: 46px
+
+			img
+				float: left
+				margin-right: 25px
+
+			.benefit-title
+				color: #20201e
+				font-size: 19px
+				line-height: 1.4
+				font-family: 'Calibri'
+
+	.guarantee-form
+		width: 728px
+		margin:  50px auto
+
+		.guarantee
+			display: inline-block
+			vertical-align: top
+			text-align: center
+
+			.guarantee-text
+				color: #20201e
+				font-size: 21px
+				font-family: 'Calibri'
+				white-space: nowrap
+				margin-top: 10px
+
+		.form-border
+			margin-left: 58px !important
+			display: inline-block
+			vertical-align: top
+
+
+

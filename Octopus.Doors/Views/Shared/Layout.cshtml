@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/stylesheets/screen.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.0.2.min.js"></script>
+    <title>Производство и продажа стальных дверей «Витязь»</title>
+</head>
+<body>
+    <header class="wrap-inline">
+        <div class="header-left inline"></div>
+        <div class="header-center inline">
+            <img src="/Content/img/logo.png" class="inline logo">
+            <h1 class="inline logo-slogan"><strong>Производство и продажа
+                <br />
+                стальных дверей &laquo;Витязь&raquo;</strong></h1>
+            <div class="header-info inline">
+
+                <span class="need-help">Нужна помощь? Звоните!
+            </span>
+
+                <p class="need-help-phone">
+                    <font size="4">8 (4212)</font>
+                    <font size="6">944-677</font>
+                </p>
+
+                <p class="need-help-time-work">
+                    Пн-Пт: 10-20; Сб-Вск: 12-18
+           
+                </p>
+
+                <div class="btn order-call wrap-inline">
+                    <div class="btn-left btn-corner inline"></div>
+                    <div class="btn-center inline">Заказать звонок!</div>
+                    <div class="btn-right btn-corner inline"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header-right inline"></div>
+    </header>
+
+
+
+    <div class="wrap-round-icons">
+        <figure class="pin inline">
+            <img src="/Content/img/icon-people.png" />
+            <figcaption>
+                <span class="red-text">1397 </span>семей купили наши<br />
+                двери в прошлом году
+        </figcaption>
+        </figure>
+
+        <figure class="pin inline">
+            <img src="/Content/img/icon-people.png" />
+            <figcaption>
+                <span class="red-text">100 </span>дверей в день<br />
+                производит наш завод
+        </figcaption>
+        </figure>
+
+        <figure class="pin inline">
+            <img src="/Content/img/icon-100.png" />
+            <figcaption>
+                <span class="red-text">5 лет </span>гарантии<br />
+                на двери и монтаж
+        </figcaption>
+        </figure>
+    </div>
+
+    <div class="wrap-main-nav wrap-inline" id="main-menu">
+        <div class="first inline"></div>
+        <nav class="main-nav inline">
+            <a href="/Main/IndexPart" ajax="true">Главная</a>
+            <span class="separete">|</span>
+            <a href="/Main/StandartPart" ajax="true">Витязь-Стандарт</a>
+            <span class="separete">|</span>
+            <a href="/Main/PremiumPart" ajax="true">Витязь-Премиум</a>
+            <span class="separete">|</span>
+            <a href="/Main/FireProofPart" ajax="true">Противопожарные</a>
+            <span class="separete">|</span>
+            <a href="/whosale">Оптовикам</a>
+            <span class="separete">|</span>
+            <a href="/Main/ArticlesPart" ajax="true">Статьи</a>
+            <span class="separete">|</span>
+            <a href="/Main/AboutPart" ajax="true">О Нас</a>
+        </nav>
+        <div class="last inline"></div>
+    </div>
+    
+    @RenderBody()
+
+    <div class="reasons blue-green-gradient-block">
+        <div class="block-with-circle">
+            <h2 class="reasons-title">10 причин, почему нас выбрали более 1397 семей:</h2>
+
+            <ul class="reasons-list">
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-house.png" class="reason-list-item-img" />
+                    У нас собственное производство - а это значит, что мы несем полную ответственность за качество наших дверей, если что-то сломается, мы всегда починим. Быстро и без проблем. 
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-dollar.png" class="reason-list-item-img" />
+                    У нас сравнительно низкие цены - многие двери в Хабаровске, привезены с Запада страны, и в их стоимость заложены 
+транспортные расходы. Зачем Вам переплачивать? Наши двери произведены в г.Хабаровск. 
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-car.png" class="reason-list-item-img" />
+                    У нас бесплатная доставка по городу - а это значит, что мы не пытаемся наживиться на наших покупателях, мы хотим 
+предоставить качественный сервис, чтобы нашему покупателю было максимально комфортно сделать покупку у нас.
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-key.png" class="reason-list-item-img" />
+                    Мы делаем монтаж и отделку - а это значит, Вам не нужно дополнительно искать установщиков, наши монтажники 
+сделают все качественно, в срок и по ГОСТу. Мы несем ответсвенность за качество установки!
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-clock.png" class="reason-list-item-img" />
+                    У нас самые короткие сроки от заказа до монтажа - а это значит, что Вам не нужно ждать долго. От звонка  до 
+монтажа проходит максимум 3 дня! Это удобно!
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-peace.png" class="reason-list-item-img" />
+                    Мы даем гарантию на двери и произведенные работы - а это значит, что если у Вас что то сломается или Вам что-то 
+не устроит, мы заменем Вам дверь, в течении суток, или вернем Вам деньги. 
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-doors.png" class="reason-list-item-img" />
+                    Мы используем сталь толщиной 3мм - а это значит, что наши двери можно вскрыть лишь специальными 
+пневматическими ножницами, которыми пользуются спасатели. Это гарантия Вашей безопасности.
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-lock.png" class="reason-list-item-img" />
+                    Мы устанавливаем качественные российские замки Гардиан - а это значит, что двери вскрыть обычной 
+отмычкой невозможно! Замки имеют 2 435 118 комбинаций - чтобы подобрать нужную у вора уйдет неделя.
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-hz.png" class="reason-list-item-img" />
+                    У нас можно выбрать цвет металла и цвет внутренней отделки - а это значит, что внешний вид двери можно 
+подобрать к любому интерьеру от классического до хай-тек. Это красиво и современно.
+        </li>
+                <li class="reasons-list-item">
+                    <img src="/Content/img/reason-icon-hear.png" class="reason-list-item-img" />
+                    У нас Вам никогда не нагрубят или не выслушают - а это значит, что Вы всегда можете рассчитывать на качественную 
+консультацию, совет или помощь в решении той или иной проблемы. 
+        </li>
+            </ul>
+
+        </div>
+        <div class="border-bottom"></div>
+    </div>
+
+
+
+    <div class="how-we-works">
+        <div class="wrap-how-we-works">
+            <img src="/Content/img/how-we-works.png" />
+
+            <span class="how-we-works-item item1">1. Вы <span class="underline">оставляете заявку</span> на сайте или по телефону...
+      </span>
+
+            <span class="how-we-works-item item2">2. <span class="underline">Получаете консультации</span>, мы ответим
+на все волнующие Вас вопросы и 
+поможем подобрать дверь под Ваши
+требования и нужды...
+      </span>
+
+            <span class="how-we-works-item item3">3. <span class="underline">Мы делаем бесплатный замер Вашего</span>
+                дверного проема. В любое удобное 
+для Вас время...
+      </span>
+
+            <span class="how-we-works-item item4">4. Вашу <span class="underline">дверь изготавливают</span> на заводе
+по индивидуальному размеру...
+      </span>
+
+            <span class="how-we-works-item item5">5. Мы <span class="underline">осуществляем бесплатную 
+доставку</span>, делаем качественный 
+монтаж и финишную отделку...
+      </span>
+
+            <span class="how-we-works-item item6">6. Вы <span class="underline">оплачиваете Ваш заказ</span>,
+у Вас на дому или у нас
+ в офисе - как Вам удобнее...
+      </span>
+
+            <span class="how-we-works-item item7">7. <span class="underline">Наслаждаетесь новой дверью</span>,
+отсутствием шума и пыли, а мы
+даем гарантию на 5 лет!
+      </span>
+        </div>
+
+    </div>
+
+
+    <div class="video-block">
+        <div class="wrap-video-block">
+            <h2 class="video-block-title title">Посмотрите видео о том, как мы производим двери:</h2>
+
+            <img src="/Content/img/video.png" class="inline" />
+            <ul class="video-benefits-list inline">
+                <li class="video-benefits-list-item">* Автоматизированная
+                    <br />
+                    &nbsp;&nbsp;производственная линия</li>
+                <li class="video-benefits-list-item">* Оригинальное немецкое
+                    <br />
+                    &nbsp;&nbsp; оборудование</li>
+                <li class="video-benefits-list-item">* Внутренний контроль качества</li>
+                <li class="video-benefits-list-item">* 100 дверей в день</li>
+                <li class="video-benefits-list-item">* Сертификаты ГОСТ, ISO</li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="response-block">
+        <div class="wrap-response-block">
+            <h2 class="response-block-title title">Отзывы:</h2>
+
+            <div class="response-item">
+                <img src="/Content/img/photo.png" class="response-item-img inline">
+                <span class="response-item-text inline">Заказывал дверь в квартиру, сделали все как и требовалось. Персонал очень
+          дружелюбный. Спасибо.
+         
+                    <br />
+                    <span class="subscribtion inline">Иван Петров.
+           
+                        <div class="player">
+                            <img src="/Content/img/player.png">
+                        </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="response-item">
+                <img src="/Content/img/photo.png" class="response-item-img inline">
+                <span class="response-item-text inline">Заказывали 3 двери в офиc, сделали в срок и за небольшие деньги.
+         
+                    <br />
+                    <span class="subscribtion inline">Иван Петров.
+           
+                        <div class="player">
+                            <img src="/Content/img/player.png">
+                        </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="response-item">
+                <img src="/Content/img/photo.png" class="response-item-img inline">
+                <span class="response-item-text inline">Заказывал дверь в квартиру, сделали все как и требовалось. Персонал очень
+          дружелюбный. Спасибо.
+         
+                    <br />
+                    <span class="subscribtion inline">Иван Петров.
+           
+                        <div class="player">
+                            <img src="/Content/img/player.png">
+                        </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="handler handler-left"></div>
+            <div class="handler handler-right"></div>
+        </div>
+    </div>
+
+
+    <div class="trust-block">
+        <div class="wrap-trust-block">
+            <h2 class="trust-block-title title">Нам доверяют:</h2>
+
+            <div class="wrap-carousel">
+
+                <div class="carousel">
+                    <img src="/Content/img/carousel-img1.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img2.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img3.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img4.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img5.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img6.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img7.png" class="carousel-item" />
+                    <img src="/Content/img/carousel-img8.png" class="carousel-item carouse-item-last" />
+                </div>
+
+                <div class="handler handler-left"></div>
+                <div class="handler handler-right"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="models-doors blue-green-gradient-block">
+
+        <div class="block-with-circle">
+            <div class="duga"></div>
+            <img class="models-doors-title" src="/Content/img/models-doors.png" />
+
+            <div class="wrap-round-icons">
+                <figure class="pin inline">
+                    <img src="/Content/img/model-door.png" />
+                    <figcaption>Витязь-Стандарт</figcaption>
+                </figure>
+
+                <figure class="pin inline">
+                    <img src="/Content/img/model-door.png" />
+                    <figcaption>Витязь-Классик</figcaption>
+                </figure>
+
+                <figure class="pin inline">
+                    <img src="/Content/img/model-door.png" />
+                    <figcaption>Витязь-Премиум</figcaption>
+                </figure>
+
+                <figure class="pin inline">
+                    <img src="/Content/img/model-door.png" />
+                    <figcaption>Противопожарные<br />
+                        и промышленные двери</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="border-bottom"></div>
+    </div>
+
+
+
+    <div class="our-documents">
+        <div class="wrap-our-documents">
+            <div class="first-block-after-menu-doors inline">
+                <div class="wrap-carousel inline">
+                    <div class="our-documents-title title">Наши документы:</div>
+
+                    <div class="wrap-doors">
+                        <ul>
+                            <li class="inline li-left">
+                                <img src="/Content/img/door-right.png" /></li>
+                            <li class="inline li-active">
+                                <img src="/Content/img/door-center.png" /></li>
+                            <li class="inline li-right">
+                                <img src="/Content/img/door-right.png" /></li>
+                        </ul>
+                    </div>
+
+                    <div class="handler left-handler"></div>
+                    <div class="handler right-handler"></div>
+
+                </div>
+
+            </div>
+
+            <div class="first-block-after-menu-form inline">
+
+                <div class="btn btn-counter wrap-inline">
+
+                    <div class="btn-center inline">Счётчик</div>
+
+                </div>
+
+                <div class="wrap-form">
+                    <h2 class="red-text">Снижение цен!</h2>
+                    <span class="text">Оставив заявку сейчас, вы
+                        <br />
+                        экономите 5 010 руб.!<br />
+                        Успей заказать двери по выгодной
+                        <br />
+                        цене и с бесплатной доставкой!
+          </span>
+
+                    <form class="form-order">
+                        <label>Ваше Имя</label><br />
+                        <input val="" type="text" />
+                        <br />
+                        <label>Контактный телефон</label><br />
+                        <input val="" type="text" />
+                    </form>
+
+                    <div class="btn btn-order2 wrap-inline">
+                        <div class="btn-left btn-corner inline"></div>
+                        <div class="btn-center inline">Записаться на замер</div>
+                        <div class="btn-right btn-corner inline"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="border-bottom"></div>
+    </div>
+
+
+
+
+    <footer class="wrap-inline">
+        <div class="socialbox">
+            <img src="/Content/img/vk.png" class="socialbox-item" />
+            <img src="/Content/img/facebook.png" class="socialbox-item social-item-fb" />
+            <img src="/Content/img/odno.png" class="socialbox-item social-item-odno" />
+            <img src="/Content/img/google.png" class="socialbox-item social-item-google" />
+            <img src="/Content/img/twitter.png" class="socialbox-item-last" />
+        </div>
+        <div class="footer-left inline"></div>
+        <div class="footer-center inline">
+            <p class="footer-info-left">
+                Торгово-производственная компания «Октопус-ДВ»
+                <br />
+                г. Хабаровск, ул.Халтурина 4А, тел. +7 (4212) 944-677
+                <br />
+                ОГРН 1112721005594
+            </p>
+
+            <div class="footer-info-right inline">
+
+                <p class="need-help-phone">
+                    <font size="5">8 (4212)</font>
+                    <font size="5">944-677</font>
+                </p>
+
+                <p class="need-help-time-work">
+                    Пн-Пт: 10-20; Сб-Вск: 12-18
+       
+                </p>
+
+                <div class="btn footer-order-call wrap-inline">
+                    <div class="btn-left btn-corner inline"></div>
+                    <div class="btn-center inline">Позвонить</div>
+                    <div class="btn-right btn-corner inline"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-right inline"></div>
+    </footer>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on("click", "a[ajax]", function () {
+                var href = $(this).attr("href");
+                $.get(href, {}, function (data) {
+                    $('.ajax-content').remove();
+                    $("#main-menu").after(data);
+                }, 'html');
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

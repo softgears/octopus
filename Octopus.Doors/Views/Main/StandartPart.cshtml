@@ -1,0 +1,92 @@
+﻿@model dynamic
+
+<div class="first-block-after-menu blue-green-gradient-block standart-door-header ajax-content">
+
+    <div class="block-with-circle">
+
+        @* Дверь *@
+        <div class="door">
+            <img src="~/Content/img/standart/door.png" />
+            <div class="images">
+                <div class="row1">
+                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/img/standart/image-bg.png" />
+                </div>
+                <div class="row2">
+                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/img/standart/image-bg.png" />
+                </div>
+            </div>
+        </div>
+
+        @* Инфа о двери *@
+        <div class="door-info">
+            <div class="header">
+                Витязь-Стандарт
+            </div>
+            <div class="desc">
+                Стальные двери Витязь-Стандарт - созданы специально для людей, ценящих надежность, красоту, и не желающих тратить большие деньги на входные двери.
+            </div>
+        </div>
+
+        @* Форма *@
+        @Html.Partial("StandartForm")
+
+
+        @* Кнопка купить *@
+        <div class="buy-block">
+            <span class="buy-btn">Купить
+            </span>
+        </div>
+
+    </div>
+    <div class="border-bottom"></div>
+</div>
+
+@* Второй блок *@
+<div class="cool-doors-description ajax-content standart-door-footer">
+    <div class="wrap-cool-doors-description">
+
+        @* Клевые особенности *@
+        <div class="standart-desc-header">
+            В чем особенности дверей Витязь-Стандарт?
+        </div>
+        <ul class="benefits-list">
+            <li class="benefits-list-item">
+                <img src="/Content/img/doors-icon1.png" />
+                <span class="benefit-title">Открываются тихо и плавно</span>
+            </li>
+            <li class="benefits-list-item">
+                <img src="/Content/img/doors-icon2.png" />
+                <span class="benefit-title">Открываются тихо и плавно</span>
+            </li>
+            <li class="benefits-list-item">
+                <img src="/Content/img/doors-icon3.png" />
+                <span class="benefit-title">Открываются тихо и плавно</span>
+            </li>
+            <li class="benefits-list-item">
+                <img src="/Content/img/doors-icon4.png" />
+                <span class="benefit-title">Открываются тихо и плавно</span>
+            </li>
+        </ul>
+
+        @* Гарантия и форма *@
+        <div class="guarantee-form">
+            <div class="guarantee">
+                <img src="~/Content/img/standart/guarantee.png" />
+                <div class="guarantee-text">
+                    Вы получаете 100% Гарантию качества
+                </div>
+            </div>
+            @Html.Partial("StandartForm")
+        </div>
+
+
+        @* Нижняя дуга *@
+        <div class="duga"></div>
+    </div>
+</div>
