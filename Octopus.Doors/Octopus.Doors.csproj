@@ -191,6 +191,7 @@
     <Content Include="Content\img\sale-icon.png" />
     <Content Include="Content\img\social-bg.png" />
     <Content Include="Content\img\standart\buy-btn.png" />
+    <Content Include="Content\img\standart\catalog-button.png" />
     <Content Include="Content\img\standart\compare.png" />
     <Content Include="Content\img\standart\door.png" />
     <Content Include="Content\img\standart\form-border.png" />
@@ -202,6 +203,14 @@
     <Content Include="Content\img\Untitled-9.png" />
     <Content Include="Content\img\video.png" />
     <Content Include="Content\img\vk.png" />
+    <Content Include="Content\img\whosale\book.png" />
+    <Content Include="Content\img\whosale\do-1.png" />
+    <Content Include="Content\img\whosale\how-work.jpg" />
+    <Content Include="Content\img\whosale\hw-bg.jpg" />
+    <Content Include="Content\img\whosale\not-do-1.png" />
+    <Content Include="Content\img\whosale\top-bg.jpg" />
+    <Content Include="Content\img\whosale\top-center.png" />
+    <Content Include="Content\img\whosale\top-repeat.png" />
     <Content Include="Content\img\wizard-circle-bg.png" />
     <Content Include="Content\stylesheets\ie.css" />
     <Content Include="Content\stylesheets\print.css" />
@@ -224,6 +233,17 @@
     <Content Include="Views\Main\FireProofPart.cshtml" />
     <Content Include="Views\Main\ArticlesPart.cshtml" />
     <Content Include="Views\Main\AboutPart.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Main\Whosale.cshtml" />
+    <Content Include="Views\Shared\VideoBlock.cshtml" />
+    <Content Include="Views\Shared\DoorsCatalog.cshtml" />
+    <Content Include="Views\Main\WhosaleForm.cshtml" />
+    <Content Include="Views\Main\Standart.cshtml" />
+    <Content Include="Views\Main\Premium.cshtml" />
+    <Content Include="Views\Main\FireProof.cshtml" />
+    <Content Include="Views\Main\Articles.cshtml" />
+    <Content Include="Views\Main\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

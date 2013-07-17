@@ -30,12 +30,30 @@ namespace Octopus.Doors.Controllers
         }
 
         /// <summary>
+        /// Отображает стандартную страницу с дверью
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Standart()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// Отображает фрагмент стандартной двери
         /// </summary>
         /// <returns></returns>
         public ActionResult StandartPart()
         {
             return PartialView();
+        }
+
+        /// <summary>
+        /// Отображает стандартную страницу с дверью
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Premium()
+        {
+            return View();
         }
 
         /// <summary>
@@ -48,12 +66,30 @@ namespace Octopus.Doors.Controllers
         }
 
         /// <summary>
+        /// Отображает стандартную страницу с дверью
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult FireProof()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// Отображает фрагмент страницы с противопожарными дверями
         /// </summary>
         /// <returns></returns>
         public ActionResult FireProofPart()
         {
             return PartialView();
+        }
+
+        /// <summary>
+        /// Отображает стандартную страницу с дверью
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Articles()
+        {
+            return View();
         }
 
         /// <summary>
@@ -65,9 +101,27 @@ namespace Octopus.Doors.Controllers
             return PartialView();
         }
 
+        /// <summary>
+        /// Отображает стандартную страницу с дверью
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult About()
+        {
+            return View();
+        }
+
         public ActionResult AboutPart()
         {
             return PartialView();
+        }
+
+        /// <summary>
+        /// Отображает страницу для оптовиков
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Whosale()
+        {
+            return View();
         }
     }
 }

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/stylesheets/screen.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.0.2.min.js"></script>
+    <title>Производство и продажа стальных дверей «Витязь»</title>
+</head>
+<body>
+    @Html.Partial("Header")
+    
+    <div class="wrap-main-nav wrap-inline" id="main-menu">
+    <div class="first inline"></div>
+    <nav class="main-nav inline">
+        <a href="/Main/Index" ajax="true">Главная</a>
+        <span class="separete">|</span>
+        <a href="/Main/Standart" ajax="true">Витязь-Стандарт</a>
+        <span class="separete">|</span>
+        <a href="/Main/Premium" ajax="true">Витязь-Премиум</a>
+        <span class="separete">|</span>
+        <a href="/Main/FireProof" ajax="true">Противопожарные</a>
+        <span class="separete">|</span>
+        <a href="/Main/whosale">Оптовикам</a>
+        <span class="separete">|</span>
+        <a href="/Main/Articles" ajax="true">Статьи</a>
+        <span class="separete">|</span>
+        <a href="/Main/About" ajax="true">О Нас</a>
+    </nav>
+    <div class="last inline"></div>
+</div>
+
+    @* Схема оптовикам *@
+    <div class="scheme-wrapper">
+        <div class="scheme">
+        </div>
+    </div>
+
+    @* Книга *@
+    <div class="book-wrapper">
+        <div class="book">
+            <ul class="what-we-not-do">
+                <li>
+                    <img src="/Content/img/whosale/not-do-1.png" />
+                    Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+                </li>
+                <li>
+                    <img src="/Content/img/whosale/not-do-1.png" />
+                    Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+                </li>
+                <li>
+                    <img src="/Content/img/whosale/not-do-1.png" />
+                    Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+                </li>
+            </ul>
+            <ul class="what-we-do">
+                <li>
+                    <img src="/Content/img/whosale/do-1.png" />
+                    Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+                </li>
+                <li>
+                    <img src="/Content/img/whosale/do-1.png" />
+                    Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+                </li>
+                <li>
+                    <img src="/Content/img/whosale/do-1.png" />
+                    Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    @* Как мы работаем *@
+    <div class="how-work-wrapper">
+        <div class="how-work">
+            
+        </div>
+    </div>
+    
+    @* Видео *@
+    @Html.Partial("VideoBlock")
+    
+    @* Каталог дверей *@
+    @Html.Partial("DoorsCatalog")
+    
+    @* Скачать каталог и оставтиь заявку *@
+    <div class="download-catalog">
+        <div class="download">
+            <a href="/files/catalog.zip" title="Скачать каталог">
+                <img src="~/Content/img/standart/catalog-button.png" />
+            </a>
+        </div>
+        <div class="form-wrapper">
+            @Html.Partial("WhosaleForm")
+        </div>
+    </div>
+
+    @Html.Partial("Footer")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+</html>
