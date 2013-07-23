@@ -37,3 +37,59 @@
 
     </div>
 </footer>
+<script type="text/javascript">
+    // Общие скрипты
+    $(".form-order").submit(function () {
+        var name = $(this).find("[name='name']").val();
+        var phone = $(this).find("[name='phone']").val();
+        if (name == null || name == "") {
+            alert("Введите ваше имя");
+            return false;
+        }
+        if (phone == null || phone == "") {
+            alert("Введите ваш телефон");
+            return false;
+        }
+        return true;
+    }).ajaxForm(function (response) {
+        yaCounter21868750.reachGoal("feedback");
+        alert("Ваша заявка принята. Менеджер свяжется с Вами в ближайшее время.");
+    });
+    $(".form-border").find(".btn-center").click(function () {
+        $(this).parent().hide();
+        var self = this;
+        setTimeout(function() {
+            $(self).parent().show();
+        },5000);
+        $(this).parents(".form-border").first().find("form").submit();
+    });
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter21868750 = new Ya.Metrika({
+                    id: 21868750,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21868750" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
