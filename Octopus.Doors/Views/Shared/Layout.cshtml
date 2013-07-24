@@ -188,21 +188,27 @@
     </div>
 
 
-    <div class="trust-block">
+    <div class="trust-block" id="partners-carousel">
         <div class="wrap-trust-block">
             <h2 class="trust-block-title title">Нам доверяют:</h2>
 
             <div class="wrap-carousel">
 
                 <div class="carousel">
-                    <img src="/Content/img/carousel-img1.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img2.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img3.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img4.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img5.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img6.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img7.png" class="carousel-item" />
-                    <img src="/Content/img/carousel-img8.png" class="carousel-item carouse-item-last" />
+                    <div class="carousel-content">
+                        <img src="/Content/img/logos/logo0011.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0021.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0031.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0041.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0051.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0061.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0071.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0081.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0091.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0101.jpg" class="carousel-item" />
+                        <img src="/Content/img/logos/logo0111.jpg" class="carousel-item carouse-item-last" />    
+                    </div>
+                    
                 </div>
 
                 <div class="handler handler-left"></div>
@@ -295,6 +301,20 @@
                     $("#main-menu").after(data);
                 }, 'html');
                 return false;
+            });
+            $("#partners-carousel .handler-left").click(function () {
+                var x = $("#partners-carousel").find(".carousel-content").position().left;
+                if (x >= 0 ) {
+                    x = -50;
+                }
+                $("#partners-carousel").find(".carousel-content").css("left", (x + 50) + "px");
+            });
+            $("#partners-carousel .handler-right").click(function () {
+                var x = $("#partners-carousel").find(".carousel-content").position().left;
+                if (x < (880 - 1595)) {
+                    return false;
+                }
+                $("#partners-carousel").find(".carousel-content").css("left", (x - 50) + "px");
             });
         });
     </script>

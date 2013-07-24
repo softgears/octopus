@@ -32,7 +32,7 @@
       <file leaf-file-name="screen.sass" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="18" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.5958816">
+            <state line="765" column="94" selection-start="13281" selection-end="13281" vertical-scroll-proportion="0.18018018">
               <folding />
             </state>
           </provider>
@@ -84,7 +84,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -135,8 +134,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Octopus.Doors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Octopus.Doors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,6 +247,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="18" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/sass/ie.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="18" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Content/sass/ie.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -315,7 +354,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="18" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.5958816">
+        <state line="765" column="94" selection-start="13281" selection-end="13281" vertical-scroll-proportion="0.18018018">
           <folding />
         </state>
       </provider>

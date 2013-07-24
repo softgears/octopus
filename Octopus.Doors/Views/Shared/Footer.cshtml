@@ -11,9 +11,9 @@
     <div class="footer-center inline">
         <p class="footer-info-left">
             Торгово-производственная компания «Октопус-ДВ»
-                <br />
+            <br />
             г. Хабаровск, ул.Халтурина 4А, тел. +7 (4212) 944-677
-                <br />
+            <br />
             ОГРН 1112721005594
         </p>
 
@@ -37,6 +37,28 @@
 
     </div>
 </footer>
+<div id="overlay">
+    
+</div>
+<div id="success-dlg">
+    <div class="buttons">
+        <a href="http://vk.com/">
+            <img src="~/Content/img/Media/vk.png" />
+        </a>
+        <a href="http://facebook.com/">
+            <img src="~/Content/img/Media/fb.png" /> 
+        </a>
+        <a href="http://odnoklassniki.ru/">
+            <img src="~/Content/img/Media/ok.png" /> 
+        </a>
+        <a href="http://plus.google.com/">
+            <img src="~/Content/img/Media/gp.png" /> 
+        </a>
+        <a href="http://twitter.com/">
+            <img src="~/Content/img/Media/tw.png" />
+        </a>
+    </div>
+</div>
 <script type="text/javascript">
     // Общие скрипты
     $(".form-order").submit(function () {
@@ -53,7 +75,7 @@
         return true;
     }).ajaxForm(function (response) {
         yaCounter21868750.reachGoal("feedback");
-        alert("Ваша заявка принята. Менеджер свяжется с Вами в ближайшее время.");
+        showSuccessDlg();
     });
     $(".form-border").find(".btn-center").click(function () {
         $(this).parent().hide();
@@ -63,6 +85,15 @@
         },5000);
         $(this).parents(".form-border").first().find("form").submit();
     });
+    function showSuccessDlg() {
+        var dlg = $("#success-dlg");
+        var overlay = $("#overlay");
+        overlay.width($(document).width()).height($(document).height()).show().unbind("click").click(function () {
+            overlay.hide();
+            dlg.hide();
+        });
+        dlg.css("left", window.innerWidth / 2 - dlg.width() / 2).css("top", window.innerHeight / 2 - dlg.height() / 2).show();
+    }
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
