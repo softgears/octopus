@@ -94,9 +94,181 @@
         });
         dlg.css("left", window.innerWidth / 2 - dlg.width() / 2).css("top", window.innerHeight / 2 - dlg.height() / 2).show();
     }
+    
+    // Счетчик
+    setInterval(function() {
+        $(".counter").each(function (index, item) {
+
+            function startAndEndOfWeek(date) {
+
+                // If no date object supplied, use current date
+                // Copy date so don't modify supplied date
+                var now = date ? new Date(date) : new Date();
+
+                // set time to some convenient value
+                now.setHours(0, 0, 0, 0);
+
+                // Get the previous Monday
+                var monday = new Date(now);
+                monday.setDate(monday.getDate() - monday.getDay() + 1);
+
+                // Get next Sunday
+                var sunday = new Date(now);
+                sunday.setDate(sunday.getDate() - sunday.getDay() + 7);
+
+                // Return array of date objects
+                return [monday, sunday];
+            }
+
+            var now = new Date();
+            var till = new Date(now.getFullYear(), now.getMonth(), now.getUTCDate() + 1, 0, 0, 0);
+            var dates = startAndEndOfWeek(now);
+            till = dates[1];
+            var diff = (till.getTime() - now.getTime()) / 1000;
+            var string = "";
+            var days, hours, minutes;
+            if (diff <= 0) {
+                days = "00";
+                hours = "00";
+                minutes = "00";
+            } else {
+                days = Math.floor(diff / (3600 * 24));
+                var left = diff - days * 3600 * 24;
+                hours = Math.floor(left / (3600));
+                left = left - hours * (3600);
+                minutes = Math.floor(left / (60));
+                //var seconds = Math.floor(left - minutes * (60));
+                if (days < 10) {
+                    days = "0" + days.toString();
+                } else if (days > 99) {
+                    days = "99";
+                } else {
+                    days = days.toString();
+                }
+                if (hours < 10) {
+                    hours = "0" + hours.toString();
+                } else {
+                    hours = hours.toString();
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes.toString();
+                } else {
+                    minutes = minutes.toString();
+                }
+            }
+            $(item).find(".days").text(days);
+            $(item).find(".hours").text(hours);
+            $(item).find(".minutes").text(minutes);
+        });
+    }, 1000);
+    
+
+    var doorsArray = [
+        "/Content/photos/doors/small/1.jpg",
+        "/Content/photos/doors/small/2.jpg",
+        "/Content/photos/doors/small/3.jpg",
+        "/Content/photos/doors/small/4.jpg",
+        "/Content/photos/doors/small/5.jpg",
+        "/Content/photos/doors/small/6.jpg",
+        "/Content/photos/doors/small/7.jpg",
+        "/Content/photos/doors/small/8.jpg"
+    ];
+    var certsArray = [
+        "/Content/photos/certificates/1.JPG",
+        "/Content/photos/certificates/2.JPG",
+        "/Content/photos/certificates/3.JPG",
+        "/Content/photos/certificates/4.JPG"
+    ];
+    var doorsOffset = 0;
+    var certOffset = 0;
+    function bindDoors() {
+        var index1 = doorsOffset;
+        var index2 = doorsOffset + 1;
+        if (index2 >= doorsArray.length) {
+            index2 = index2 - doorsArray.length;
+        }
+        var index3 = doorsOffset + 2;
+        if (index3 >= doorsArray.length) {
+            index3 = index3 - doorsArray.length;
+        }
+        var item1 = doorsArray[index1];
+        var item2 = doorsArray[index2];
+        var item3 = doorsArray[index3];
+
+        $("#doors-carousel").find(".li-left").find("img").attr("src", item1);
+        $("#doors-carousel").find(".li-active").find("img").attr("src", item2);
+        $("#doors-carousel").find(".li-right").find("img").attr("src", item3);
+    }
+    bindDoors();
+
+    $("#next-door").click(function () {
+        doorsOffset += 1;
+        if (doorsOffset >= doorsArray.length) {
+            doorsOffset = 0;
+        }
+        bindDoors();
+    });
+
+    $("#prev-door").click(function () {
+        doorsOffset -= 1;
+        if (doorsOffset < 0) {
+            doorsOffset = doorsOffset.length-1;
+        }
+        bindDoors();
+    });
+    
+    function bindCertificates() {
+        var index1 = certOffset;
+        var index2 = certOffset + 1;
+        if (index2 >= certsArray.length) {
+            index2 = index2 - certsArray.length;
+        }
+        var index3 = certOffset + 2;
+        if (index3 >= certsArray.length) {
+            index3 = index3 - certsArray.length;
+        }
+        var item1 = certsArray[index1];
+        var item2 = certsArray[index2];
+        var item3 = certsArray[index3];
+
+        $("#cert-carousel").find(".li-left").find("img").attr("src", item1);
+        $("#cert-carousel").find(".li-active").find("img").attr("src", item2);
+        $("#cert-carousel").find(".li-right").find("img").attr("src", item3);
+    }
+
+    bindCertificates();
+    
+    $("#next-cert").click(function () {
+        certOffset += 1;
+        if (certOffset >= certsArray.length) {
+            certOffset = 0;
+        }
+        bindCertificates();
+    });
+
+    $("#prev-cert").click(function () {
+        certOffset -= 1;
+        if (certOffset < 0) {
+            certOffset = certsArray.length - 1;
+        }
+        bindCertificates();
+    });
+    $("#cert-carousel img").click(function () {
+        $.fancybox.open({ href: $(this).attr("src") });
+    });
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
+    function getOffset(el) {
+        var _x = 0;
+        var _y = 0;
+        while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+            _x += el.offsetLeft - el.scrollLeft;
+            _y += el.offsetTop - el.scrollTop;
+            el = el.offsetParent;
+        }
+        return { top: _y, left: _x };
+    }
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function () {
             try {
@@ -124,3 +296,25 @@
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/21868750" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+@if ((string) Session["Admin"] == "true")
+{
+    <script type="text/javascript">
+        $("body").on("click",".edit-content", function () {
+            var key = $(this).data("key");
+            var item = $("[data-edit-key='" + key + "']");
+            var currentContent = item.text();
+            var newContent = prompt("Введите содержимое этого блока", currentContent);
+            if (newContent != null && newContent != "") {
+                if (newContent != currentContent) {
+                    $.post("/Main/SaveContent", { key: key, newValue: newContent }, function (data) {
+                        if (data.success) {
+                            $(item).text(newContent);
+                        } else {
+                            alert("Не удалось сохранить элемент");
+                        }
+                    }, 'json');
+                }
+            }
+        });
+    </script>
+}

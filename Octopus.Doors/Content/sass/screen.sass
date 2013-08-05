@@ -352,15 +352,34 @@ footer
 					position: relative
 
 				.li-left
-					margin: 70px 0 0 0 
+					margin: 70px 0 0 0
+					width: 104px
+					text-align: center
+
+					img
+						height: 223px
+						width: auto
 
 				.li-active
-					margin-left: -15px
+					margin-left: -25px
 					z-index: 2
+					left: -18px
+					width: 192px
+					text-align: center
+
+					img
+						height: 376px
+						width: auto
 
 				.li-right
 					margin: 70px 0 0 -55px
 					z-index: 1
+					width: 104px
+					text-align: center
+
+					img
+						height: 223px
+						width: auto
 
 			.handler
 				width: 19px
@@ -386,13 +405,13 @@ footer
 				height: 43px
 
 			.left-handler
-				left: 30px
+				left: 5px
 				cursor: pointer
 				background:
 					image: image-url('carousel-handler-left.png', false, false)
 
 			.right-handler				
-				right: 30px
+				right: 5px
 				z-index: 3
 				cursor: pointer
 				background:
@@ -428,7 +447,7 @@ $btn-counter-height: 47px
 
 	.btn-counter
 		margin:
-			top: 50px
+			top: 20px
 			bottom: 30px
 			left: 5px
 
@@ -822,6 +841,10 @@ $btn-counter-height: 47px
 					font:
 						size: 16px
 
+				img
+					width: auto
+					height: 351px
+
 
 
 .our-documents
@@ -853,17 +876,37 @@ $btn-counter-height: 47px
 				li
 					vertical-align: middle
 					position: relative
+					cursor: pointer
 
 				.li-left
-					margin: 70px 0 0 0 
+					margin: 70px 0 0 0
+					width: 104px
+					text-align: center
+
+					img
+						height: 201px
+						width: auto
 
 				.li-active
-					margin-left: -15px
+					margin-left: -25px
 					z-index: 2
+					left: -2px
+					width: 192px
+					text-align: center
+
+					img
+						height: 300px
+						width: auto
 
 				.li-right
 					margin: 70px 0 0 -55px
 					z-index: 1
+					width: 104px
+					text-align: center
+
+					img
+						height: 201px
+						width: auto
 
 			.handler
 				width: 19px
@@ -915,7 +958,7 @@ $btn-counter-height: 47px
 	.door
 		display: inline-block
 		vertical-align: top
-		width: 145px
+		width: 150px
 
 		.images
 			text-align: center
@@ -923,8 +966,20 @@ $btn-counter-height: 47px
 			.row1
 				margin-top: 5px
 
+				img
+					cursor: pointer
+					border: 1px solid white
+					width: 33px
+					height: 33px
+
 			.row2
 				margin-top: 12px
+
+				img
+					cursor: pointer
+					border: 1px solid white
+					width: 33px
+					height: 33px
 
 	.door-info
 		display: inline-block
@@ -1144,6 +1199,46 @@ $btn-counter-height: 47px
 
 			&:hover
 				text-decoration: none
+
+.counter
+	width: 273px
+	height: 111px
+	position: relative
+	background: url(../img/Media/counter.png) left top no-repeat
+	margin: 0px auto
+
+	.days, .hours, .minutes
+		position: absolute
+		font-size: 38px
+		font-family: Impact
+		color: white
+		text-shadow: 0px 0px 3px rgba(0,0,0,0.8)
+		width: 68px
+		height: 56px
+		letter-spacing: 1px
+		top: 26px
+		text-align: center
+		opacity: 0.95
+
+
+	.days
+		left: 18px
+
+	.hours
+		left: 105px
+
+	.minutes
+		left: 189px
+
+.edit-content
+	width: 24px
+	height: 24px
+	cursor: pointer
+	background: url(../img/Media/Edit-Document-icon.png) left top no-repeat
+	z-index: 999
+	display: block
+	position: absolute
+
 
 
 

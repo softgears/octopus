@@ -6,19 +6,19 @@
 
         @* Дверь *@
         <div class="door">
-            <img src="~/Content/img/standart/door.png" />
+            <img src="~/Content/photos/doors/premium/G47A_13_07_04608dR.jpg"  width="145" height="334"/>
             <div class="images">
                 <div class="row1">
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04602d.jpg"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04605d.jpg"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04613d.jpg"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04622d.jpg"/>
                 </div>
                 <div class="row2">
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04673d.jpg" />
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04693d.jpg" />
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04708d.jpg" />
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04713d.jpg" />
                 </div>
             </div>
         </div>
@@ -86,3 +86,11 @@
         </div>
     </div>
 </div>
+@Html.Partial("AdminControl")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".row1, .row2").find("img").click(function() {
+            $.fancybox.open({ href: $(this).attr("src") });
+        });
+    });
+</script>

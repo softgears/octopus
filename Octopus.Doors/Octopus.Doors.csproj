@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\OctopusStorage.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -118,6 +119,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\fancybox\blank.gif" />
+    <Content Include="Content\fancybox\fancybox_buttons.png" />
+    <Content Include="Content\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\fancybox\fancybox_sprite.png" />
     <Content Include="Content\img\10reasonbg.png" />
     <Content Include="Content\img\border-bottom.png" />
     <Content Include="Content\img\btn-counter-bg.png" />
@@ -182,6 +190,8 @@
     <Content Include="Content\img\main-nav-bg.png" />
     <Content Include="Content\img\main-nav-left-bg.png" />
     <Content Include="Content\img\main-nav-right-bg.png" />
+    <Content Include="Content\img\Media\counter.png" />
+    <Content Include="Content\img\Media\Edit-Document-icon.png" />
     <Content Include="Content\img\Media\fb.png" />
     <Content Include="Content\img\Media\gp.png" />
     <Content Include="Content\img\Media\mediabg.png" />
@@ -229,6 +239,45 @@
     <Content Include="Content\img\whosale\top-center.png" />
     <Content Include="Content\img\whosale\top-repeat.png" />
     <Content Include="Content\img\wizard-circle-bg.png" />
+    <Content Include="Content\jquery.fancybox-buttons.css" />
+    <Content Include="Content\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\jquery.fancybox.css" />
+    <Content Include="Content\photos\certificates\1.JPG" />
+    <Content Include="Content\photos\certificates\2.JPG" />
+    <Content Include="Content\photos\certificates\3.JPG" />
+    <Content Include="Content\photos\certificates\4.JPG" />
+    <Content Include="Content\photos\doors\small\1.jpg" />
+    <Content Include="Content\photos\doors\small\2.jpg" />
+    <Content Include="Content\photos\doors\small\3.jpg" />
+    <Content Include="Content\photos\doors\small\4.jpg" />
+    <Content Include="Content\photos\doors\small\5.jpg" />
+    <Content Include="Content\photos\doors\small\6.jpg" />
+    <Content Include="Content\photos\doors\small\7.jpg" />
+    <Content Include="Content\photos\doors\small\8.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04602d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04605d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04608dR.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04613d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04622d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04633dR.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04640dR.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04654d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04673d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04693d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04708d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04713d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04717d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04731d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04741d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04742d.jpg" />
+    <Content Include="Content\photos\doors\premium\G47A_13_07_04759d.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04555dR.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04609d.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04628d.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04637d.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04698d.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04705d.jpg" />
+    <Content Include="Content\photos\doors\std\G47A_13_07_04749d.jpg" />
     <Content Include="Content\stylesheets\ie.css" />
     <Content Include="Content\stylesheets\print.css" />
     <Content Include="Content\stylesheets\screen.css" />
@@ -236,7 +285,13 @@
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="Scripts\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\jquery.fancybox-media.js" />
+    <Content Include="Scripts\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
     <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -262,8 +317,12 @@
     <Content Include="Views\Main\FireProof.cshtml" />
     <Content Include="Views\Main\Articles.cshtml" />
     <Content Include="Views\Main\About.cshtml" />
+    <Content Include="Views\Main\Counter.cshtml" />
+    <Content Include="Views\Main\Admin.cshtml" />
+    <Content Include="Views\Main\AdminControl.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Content\js\" />
     <Folder Include="Models\" />

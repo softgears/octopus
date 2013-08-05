@@ -6,6 +6,9 @@
     <link href="~/Content/stylesheets/screen.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-2.0.2.min.js"></script>
     <script src="~/Scripts/jquery.form.js"></script>
+    <script src="~/Scripts/jquery.fancybox.pack.js"></script>
+    <script src="~/Scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link href="~/Content/jquery.fancybox.css" rel="stylesheet" />
     <title>Производство и продажа стальных дверей «Витязь»</title>
 </head>
 <body>
@@ -229,7 +232,7 @@
                     <div class="our-documents-title title">Наши документы:</div>
 
                     <div class="wrap-doors">
-                        <ul>
+                        <ul id="cert-carousel">
                             <li class="inline li-left">
                                 <img src="/Content/img/door-right.png" /></li>
                             <li class="inline li-active">
@@ -239,8 +242,8 @@
                         </ul>
                     </div>
 
-                    <div class="handler left-handler"></div>
-                    <div class="handler right-handler"></div>
+                    <div class="handler left-handler" id="prev-cert"></div>
+                    <div class="handler right-handler" id="next-cert"></div>
 
                 </div>
 
@@ -250,7 +253,7 @@
 
                 <div class="btn btn-counter wrap-inline">
 
-                    <div class="btn-center inline">Счётчик</div>
+                    @Html.Partial("Counter")
 
                 </div>
 

@@ -6,19 +6,17 @@
 
         @* Дверь *@
         <div class="door">
-            <img src="~/Content/img/standart/door.png" />
+            <img src="~/Content/photos/doors/std/G47A_13_07_04555dR.jpg" width="145" height="334"/>
             <div class="images">
                 <div class="row1">
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/photos/doors/std/G47A_13_07_04609d.jpg" style="width: 33px; height: 33px"/>
+                    <img src="~/Content/photos/doors/std/G47A_13_07_04628d.jpg" style="width: 33px; height: 33px" />
+                    <img src="~/Content/photos/doors/std/G47A_13_07_04637d.jpg" style="width: 33px; height: 33px" />
+                    <img src="~/Content/photos/doors/std/G47A_13_07_04698d.jpg" style="width: 33px; height: 33px" />
                 </div>
                 <div class="row2">
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
+                    <img src="~/Content/photos/doors/std/G47A_13_07_04705d.jpg" style="width: 33px; height: 33px" />
+                    <img src="~/Content/photos/doors/std/G47A_13_07_04749d.jpg" style="width: 33px; height: 33px" />
                 </div>
             </div>
         </div>
@@ -86,3 +84,11 @@
         </div>
     </div>
 </div>
+@Html.Partial("AdminControl")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".row1, .row2").find("img").click(function() {
+            $.fancybox.open({ href: $(this).attr("src") });
+        });
+    });
+</script>

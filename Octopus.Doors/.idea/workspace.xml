@@ -32,7 +32,7 @@
       <file leaf-file-name="screen.sass" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="765" column="94" selection-start="13281" selection-end="13281" vertical-scroll-proportion="0.18018018">
+            <state line="981" column="32" selection-start="16552" selection-end="16552" vertical-scroll-proportion="0.64993566">
               <folding />
             </state>
           </provider>
@@ -84,6 +84,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,7 +155,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,7 +354,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="765" column="94" selection-start="13281" selection-end="13281" vertical-scroll-proportion="0.18018018">
+        <state line="981" column="32" selection-start="16552" selection-end="16552" vertical-scroll-proportion="0.64993566">
           <folding />
         </state>
       </provider>

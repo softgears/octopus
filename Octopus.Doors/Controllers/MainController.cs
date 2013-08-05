@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -172,6 +173,59 @@ namespace Octopus.Doors.Controllers
             {
                 success = true
             });
+        }
+
+        /// <summary>
+        /// Отображает вход в админскую страницу
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Помечает пользователя как админка если он ввел правильный пароль
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Validate(string pass)
+        {
+            var validPass = ConfigurationManager.AppSettings["adminPassword"];
+            if (pass == validPass)
+            {
+                Session["admin"] = "true";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Admin");
+            }
+        }
+
+        /// <summary>
+        /// Схраняет изменение значения документа
+        /// </summary>
+        /// <param name="key">Ключ</param>
+        /// <param name="newValue">Значение</param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult SaveContent(string key, string newValue)
+        {
+            if (Session["Admin"] != "true")
+            {
+                return Json(new
+                    {
+                        success = false
+                    });
+            }
+            var octopus = new OctopusStorage();
+            octopus.KeyValues[key] = newValue;
+            octopus.SaveData();
+            return Json(new
+                {
+                    success = true
+                });
         }
     }
 }
