@@ -115,3 +115,25 @@
     </div>
 </div>
 @Html.Partial("AdminControl")
+<script type="text/javascript">
+    $(document).ready(function() {
+        bindDoors();
+        
+        $("#next-door").click(function () {
+            doorsOffset += 1;
+            if (doorsOffset >= doorsArray.length) {
+                doorsOffset = 0;
+            }
+            bindDoors();
+        });
+
+        $("#prev-door").click(function () {
+            doorsOffset -= 1;
+            if (doorsOffset < 0) {
+                doorsOffset = doorsOffset.length - 1;
+            }
+            bindDoors();
+        });
+    });
+    
+</script>

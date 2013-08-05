@@ -195,28 +195,12 @@
         var item2 = doorsArray[index2];
         var item3 = doorsArray[index3];
 
-        $("#doors-carousel").find(".li-left").find("img").attr("src", item1);
-        $("#doors-carousel").find(".li-active").find("img").attr("src", item2);
-        $("#doors-carousel").find(".li-right").find("img").attr("src", item3);
+        $("#doors-carousel").find(".li-left").find("img").attr("src", item1).attr("offset",index1);
+        $("#doors-carousel").find(".li-active").find("img").attr("src", item2).attr("offset", index1);
+        $("#doors-carousel").find(".li-right").find("img").attr("src", item3).attr("offset", index1);
     }
     bindDoors();
 
-    $("#next-door").click(function () {
-        doorsOffset += 1;
-        if (doorsOffset >= doorsArray.length) {
-            doorsOffset = 0;
-        }
-        bindDoors();
-    });
-
-    $("#prev-door").click(function () {
-        doorsOffset -= 1;
-        if (doorsOffset < 0) {
-            doorsOffset = doorsOffset.length-1;
-        }
-        bindDoors();
-    });
-    
     function bindCertificates() {
         var index1 = certOffset;
         var index2 = certOffset + 1;
@@ -231,9 +215,9 @@
         var item2 = certsArray[index2];
         var item3 = certsArray[index3];
 
-        $("#cert-carousel").find(".li-left").find("img").attr("src", item1);
-        $("#cert-carousel").find(".li-active").find("img").attr("src", item2);
-        $("#cert-carousel").find(".li-right").find("img").attr("src", item3);
+        $("#cert-carousel").find(".li-left").find("img").attr("src", item1).attr("offset", index1);
+        $("#cert-carousel").find(".li-active").find("img").attr("src", item2).attr("offset", index2);
+        $("#cert-carousel").find(".li-right").find("img").attr("src", item3).attr("offset", index3);
     }
 
     bindCertificates();
@@ -254,7 +238,7 @@
         bindCertificates();
     });
     $("#cert-carousel img").click(function () {
-        $.fancybox.open({ href: $(this).attr("src") });
+        $.fancybox.open(certsArray, {index: $(this).attr("offset")});
     });
 </script>
 <!-- Yandex.Metrika counter -->

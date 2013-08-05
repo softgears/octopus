@@ -1,0 +1,14 @@
+﻿@if ((string) Session["Admin"] == "true")
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".edit-content").remove();
+            $(".editable").each(function(index, item) {
+                var keyName = $(item).data("edit-key");
+                var offset = getOffset($(item).get(0));
+                var editor = $("<span title='Редактировать блок' class='edit-content' data-key='" + keyName + "' style='left: "+(offset.left-24)+"px; top: "+(offset.top-24)+"px'></span>");
+                $("body").append(editor);
+            });
+        });
+    </script>
+}

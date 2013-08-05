@@ -9,16 +9,16 @@
             <img src="~/Content/photos/doors/premium/G47A_13_07_04608dR.jpg"  width="145" height="334"/>
             <div class="images">
                 <div class="row1">
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04602d.jpg"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04605d.jpg"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04613d.jpg"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04622d.jpg"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04602d.jpg" index="0"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04605d.jpg" index="1"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04613d.jpg" index="2"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04622d.jpg" index="3"/>
                 </div>
                 <div class="row2">
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04673d.jpg" />
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04693d.jpg" />
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04708d.jpg" />
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04713d.jpg" />
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04673d.jpg" index="4"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04693d.jpg" index="5"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04708d.jpg" index="6"/>
+                    <img src="~/Content/photos/doors/premium/G47A_13_07_04713d.jpg" index="7">
                 </div>
             </div>
         </div>
@@ -89,8 +89,12 @@
 @Html.Partial("AdminControl")
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".row1, .row2").find("img").click(function() {
-            $.fancybox.open({ href: $(this).attr("src") });
+        $(".row1, .row2").find("img").click(function () {
+            var imgs = [];
+            $(".row1, .row2").find("img").each(function () {
+                imgs.push($(this).attr("src"));
+            });
+            $.fancybox.open(imgs, { index: $(this).attr("index") });
         });
     });
 </script>
