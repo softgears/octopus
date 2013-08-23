@@ -3,33 +3,29 @@
 <div class="first-block-after-menu blue-green-gradient-block standart-door-header ajax-content">
 
     <div class="block-with-circle">
-
+        <div style="position: relative">
         @* Дверь *@
-        <div class="door">
-            <img src="~/Content/img/standart/door.png" />
-            <div class="images">
-                <div class="row1">
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                </div>
-                <div class="row2">
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
-                    <img src="~/Content/img/standart/image-bg.png" />
+            <div class="door">
+                <img src="~/Content/photos/doors/fire/1.jpg" width="145" height="334" style="z-index: 1000" />
+                <div class="images">
+                    <div class="row1">
+                        <img src="~/Content/photos/doors/fire/1.jpg" />
+                        <img src="~/Content/photos/doors/fire/2.jpg" />
+                        <img src="~/Content/photos/doors/fire/3.jpg" />
+                        <img src="~/Content/photos/doors/fire/4.jpg" />
+                    </div>
                 </div>
             </div>
-        </div>
 
         @* Инфа о двери *@
         <div class="door-info">
-            <div class="header">
+            <div class="header" style="font-size: 40px">
                 Противопожарные двери
             </div>
             <div class="desc">
-                Противопожарные двери - созданы для людей, которые любят баловаться спичками и играть со всяким прочим огнем.
+                Мы так же производим противопожарные двери. Эти двери широко используются в общественных местах, административных зданиях, школах и детских садах.<br/>
+                Сегодня мы единственные производители сертифицированных противопожарных дверей в городе Хабаровск.
+
             </div>
         </div>
 
@@ -38,11 +34,11 @@
 
 
         @* Кнопка купить *@
-        <div class="buy-block">
-            <span class="buy-btn">Купить
+        <div class="buy-block fire">
+            <span class="buy-btn callback">Купить
             </span>
         </div>
-
+</div>
     </div>
     <div class="border-bottom"></div>
 </div>
@@ -58,19 +54,19 @@
         <ul class="benefits-list">
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon1.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">Любая конфигурация – одно или двухстворчатые двери, с окном, люком и тд.</span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon2.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">Негорючий утеплитель двери</span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon3.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">Специальный уплотнитель на створке и коробке </span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon4.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">Сертифицированы по ГОСТ</span>
             </li>
         </ul>
 
@@ -88,7 +84,18 @@
 </div>
 @Html.Partial("AdminControl")
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
+        $(".row1, .row2").find("img").click(function () {
+            var imgs = [];
+            $(".row1, .row2").find("img").each(function () {
+                imgs.push($(this).attr("src"));
+            });
+            $.fancybox.open(imgs, { index: $(this).attr("index") });
+        });
         bindDoors();
+        $(".callback").bind("click", function () {
+            showCallbackDlg();
+            return false;
+        });
     });
 </script>

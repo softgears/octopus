@@ -3,44 +3,48 @@
 <div class="first-block-after-menu blue-green-gradient-block standart-door-header ajax-content">
 
     <div class="block-with-circle">
+        <div style="position: relative">
 
-        @* Дверь *@
-        <div class="door">
-            <img src="~/Content/photos/doors/std/G47A_13_07_04555dR.jpg" width="145" height="334" style="z-index: 1000"/>
-            <div class="images">
-                <div class="row1">
-                    <img src="~/Content/photos/doors/std/G47A_13_07_04609d.jpg" style="width: 33px; height: 33px" index="0" />
-                    <img src="~/Content/photos/doors/std/G47A_13_07_04628d.jpg" style="width: 33px; height: 33px" index="1" />
-                    <img src="~/Content/photos/doors/std/G47A_13_07_04637d.jpg" style="width: 33px; height: 33px" index="2" />
-                    <img src="~/Content/photos/doors/std/G47A_13_07_04698d.jpg" style="width: 33px; height: 33px" index="3" />
+
+            @* Дверь *@
+            <div class="door">
+                <img src="~/Content/photos/doors/std/G47A_13_07_04555dR.jpg" width="145" height="334" style="z-index: 1000" />
+                <div class="images">
+                    <div class="row1">
+                        <img src="~/Content/photos/doors/std/G47A_13_07_04609d.jpg" style="width: 33px; height: 33px" index="0" />
+                        <img src="~/Content/photos/doors/std/G47A_13_07_04628d.jpg" style="width: 33px; height: 33px" index="1" />
+                        <img src="~/Content/photos/doors/std/G47A_13_07_04637d.jpg" style="width: 33px; height: 33px" index="2" />
+                        <img src="~/Content/photos/doors/std/G47A_13_07_04698d.jpg" style="width: 33px; height: 33px" index="3" />
+                    </div>
+                    <div class="row2">
+                        <img src="~/Content/photos/doors/std/G47A_13_07_04705d.jpg" style="width: 33px; height: 33px" index="4" />
+                        <img src="~/Content/photos/doors/std/G47A_13_07_04749d.jpg" style="width: 33px; height: 33px" index="5" />
+                    </div>
                 </div>
-                <div class="row2">
-                    <img src="~/Content/photos/doors/std/G47A_13_07_04705d.jpg" style="width: 33px; height: 33px" index="4" />
-                    <img src="~/Content/photos/doors/std/G47A_13_07_04749d.jpg" style="width: 33px; height: 33px" index="5" />
+            </div>
+
+            @* Инфа о двери *@
+            <div class="door-info">
+                <div class="header">
+                    Витязь-Стандарт
+                </div>
+                <div class="desc">
+                    Стальные двери Витязь-Стандарт - созданы специально для людей, ценящих надежность, красоту, и не желающих тратить большие деньги на входные двери.
+                Витязь-Стандарт комплектуется 2 замками Гардиан, различной кодировки. Сталь толщиной 1,5 мм – обеспечивает жесткость конструкции и уверенную защиту от силовых методов взлома.
+
                 </div>
             </div>
-        </div>
 
-        @* Инфа о двери *@
-        <div class="door-info">
-            <div class="header">
-                Витязь-Стандарт
+            @* Форма *@
+            @Html.Partial("StandartForm")
+
+
+            @* Кнопка купить *@
+            <div class="buy-block">
+                <span class="buy-btn callback">Купить
+                </span>
             </div>
-            <div class="desc">
-                Стальные двери Витязь-Стандарт - созданы специально для людей, ценящих надежность, красоту, и не желающих тратить большие деньги на входные двери.
-            </div>
         </div>
-
-        @* Форма *@
-        @Html.Partial("StandartForm")
-
-
-        @* Кнопка купить *@
-        <div class="buy-block">
-            <span class="buy-btn">Купить
-            </span>
-        </div>
-
     </div>
     <div class="border-bottom"></div>
 </div>
@@ -55,20 +59,28 @@
         </div>
         <ul class="benefits-list">
             <li class="benefits-list-item">
-                <img src="/Content/img/doors-icon1.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
-            </li>
-            <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon2.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">
+                    <span style="font-weight: bold">1,5 мм толщина стали</span> – вскрыть такую дверь весьма проблематично.  Для этого вору потребуется не менее 120 минут. Более того, такая толщина дает отличную жесткость, а значит Вы избавлены от заеданий и скрипов.
+                </span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon3.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">
+                    <span style="font-weight: bold">2 замка Гардиан-Россия</span> – один замок с сувальдным механизмом, и один с цилиндровым, а это значит, что Ваша дверь защищена от вскрытия отмычками.
+                </span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon4.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">
+                    <span style="font-weight: bold">2 противосъемных штыря</span> – защитят Вашу дверь от спиливания петель, и силового взлома. 
+                </span>
+            </li>
+            <li class="benefits-list-item">
+                <img src="/Content/img/doors-icon1.png" />
+                <span class="benefit-title">
+                    <span style="font-weight: bold">6 см утеплителя </span>– пенополистерол идеально удерживает тепло в квартире, и блокирует шум, а это значит, что Вы не услышите ни единого шороха с лестничной площадке и всегда будете оставаться в тепле.
+                </span>
             </li>
         </ul>
 
@@ -92,7 +104,11 @@
             $(".row1, .row2").find("img").each(function () {
                 imgs.push($(this).attr("src"));
             });
-            $.fancybox.open(imgs,{index: $(this).attr("index")});
+            $.fancybox.open(imgs, { index: $(this).attr("index") });
+        });
+        $(".callback").bind("click", function () {
+            showCallbackDlg();
+            return false;
         });
     });
 </script>

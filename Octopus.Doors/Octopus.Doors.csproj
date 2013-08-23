@@ -153,6 +153,7 @@
     <Content Include="Content\img\carousel-img6.png" />
     <Content Include="Content\img\carousel-img7.png" />
     <Content Include="Content\img\carousel-img8.png" />
+    <Content Include="Content\img\catalog.jpg" />
     <Content Include="Content\img\circle-bg.png" />
     <Content Include="Content\img\cool-doors.png" />
     <Content Include="Content\img\door-center.png" />
@@ -203,6 +204,11 @@
     <Content Include="Content\img\odno.png" />
     <Content Include="Content\img\photo.png" />
     <Content Include="Content\img\player.png" />
+    <Content Include="Content\img\popup\ajax-loader.gif" />
+    <Content Include="Content\img\popup\arrow.png" />
+    <Content Include="Content\img\popup\bg.png" />
+    <Content Include="Content\img\popup\btn.png" />
+    <Content Include="Content\img\popup\close.png" />
     <Content Include="Content\img\reason-icon-car.png" />
     <Content Include="Content\img\reason-icon-clock.png" />
     <Content Include="Content\img\reason-icon-dollar.png" />
@@ -242,10 +248,15 @@
     <Content Include="Content\jquery.fancybox-buttons.css" />
     <Content Include="Content\jquery.fancybox-thumbs.css" />
     <Content Include="Content\jquery.fancybox.css" />
+    <Content Include="Content\jquery.selectBox.css" />
     <Content Include="Content\photos\certificates\1.JPG" />
     <Content Include="Content\photos\certificates\2.JPG" />
     <Content Include="Content\photos\certificates\3.JPG" />
     <Content Include="Content\photos\certificates\4.JPG" />
+    <Content Include="Content\photos\doors\fire\1.jpg" />
+    <Content Include="Content\photos\doors\fire\2.jpg" />
+    <Content Include="Content\photos\doors\fire\3.jpg" />
+    <Content Include="Content\photos\doors\fire\4.jpg" />
     <Content Include="Content\photos\doors\small\1.jpg" />
     <Content Include="Content\photos\doors\small\2.jpg" />
     <Content Include="Content\photos\doors\small\3.jpg" />
@@ -282,6 +293,7 @@
     <Content Include="Content\stylesheets\print.css" />
     <Content Include="Content\stylesheets\screen.css" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
@@ -291,7 +303,9 @@
     <Content Include="Scripts\jquery.fancybox.js" />
     <Content Include="Scripts\jquery.fancybox.pack.js" />
     <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
     <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Scripts\jquery.selectBox.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

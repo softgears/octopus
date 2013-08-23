@@ -28,7 +28,7 @@
        
             </p>
 
-            <div class="btn footer-order-call wrap-inline">
+            <div class="btn footer-order-call wrap-inline callback">
                 <div class="btn-left btn-corner inline"></div>
                 <div class="btn-center inline">Позвонить</div>
                 <div class="btn-right btn-corner inline"></div>
@@ -38,7 +38,6 @@
     </div>
 </footer>
 <div id="overlay">
-    
 </div>
 <div id="success-dlg">
     <div class="buttons">
@@ -46,21 +45,66 @@
             <img src="~/Content/img/Media/vk.png" />
         </a>
         <a href="http://facebook.com/">
-            <img src="~/Content/img/Media/fb.png" /> 
+            <img src="~/Content/img/Media/fb.png" />
         </a>
         <a href="http://odnoklassniki.ru/">
-            <img src="~/Content/img/Media/ok.png" /> 
+            <img src="~/Content/img/Media/ok.png" />
         </a>
         <a href="http://plus.google.com/">
-            <img src="~/Content/img/Media/gp.png" /> 
+            <img src="~/Content/img/Media/gp.png" />
         </a>
         <a href="http://twitter.com/">
             <img src="~/Content/img/Media/tw.png" />
         </a>
     </div>
 </div>
+<div id="callback-dlg">
+    <div class="dlg-header">
+        <span class="close-btn"></span>
+    </div>
+    <div class="form">
+        <form id="callback-form" method="post" action="/main/callback">
+            <div class="field">
+                <div class="label">
+                    Имя:
+                </div>
+                <div class="editor">
+                    <input type="text" name="name" id="name-field" placeholder="Введите ваше имя" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">
+                    Телефон<span style="color: red">*</span>:
+                </div>
+                <div class="editor">
+                    <input type="text" name="phone" id="phone-field" placeholder="Введите ваш телефон" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">
+                    Время для звонка:
+                </div>
+                <div class="editor">
+                    <select name="time">
+                        <option>c 09:00 до 11:00</option>
+                        <option>c 11:00 до 13:00</option>
+                        <option>c 13:00 до 15:00</option>
+                        <option>c 15:00 до 18:00</option>
+                        <option>c 18:00 до 21:00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" id="callback-submit" value=" " /><img id="callback-ajax" style="display: none" src="~/Content/img/popup/ajax-loader.gif" />
+            </div>
+            
+        </form>
+    </div>
+</div>
 <script type="text/javascript">
     // Общие скрипты
+    $("select").selectBox();
+    $("input[name='phone']").mask("9 (999) 999-99-99");
     $(".form-order").submit(function () {
         var name = $(this).find("[name='name']").val();
         var phone = $(this).find("[name='phone']").val();
@@ -77,13 +121,39 @@
         yaCounter21868750.reachGoal("feedback");
         showSuccessDlg();
     });
+    $(".callback").bind("click",function () {
+        showCallbackDlg();
+        return false;
+    });
     $(".form-border").find(".btn-center").click(function () {
         $(this).parent().hide();
         var self = this;
-        setTimeout(function() {
+        setTimeout(function () {
             $(self).parent().show();
-        },5000);
+        }, 5000);
         $(this).parents(".form-border").first().find("form").submit();
+    });
+    $("#callback-form").submit(function () {
+        var name = $(this).find("[name='name']").val();
+        var phone = $(this).find("[name='phone']").val();
+        if (name == null || name == "") {
+            alert("Введите ваше имя");
+            return false;
+        }
+        if (phone == null || phone == "") {
+            alert("Введите ваш телефон");
+            return false;
+        }
+        $("#callback-submit").hide();
+        $("#callback-ajax").show();
+        return true;
+    }).ajaxForm(function (response) {
+        yaCounter21868750.reachGoal("feedback");
+        $("#callback-submit").show();
+        $("#callback-ajax").hide();
+        $("#callback-dlg").hide();
+        $("#overlay").hide();
+        showSuccessDlg();
     });
     function showSuccessDlg() {
         var dlg = $("#success-dlg");
@@ -94,9 +164,22 @@
         });
         dlg.css("left", window.innerWidth / 2 - dlg.width() / 2).css("top", window.innerHeight / 2 - dlg.height() / 2).show();
     }
-    
+    function showCallbackDlg() {
+        var dlg = $("#callback-dlg");
+        var overlay = $("#overlay");
+        overlay.width($(document).width()).height($(document).height()).show().unbind("click").click(function () {
+            overlay.hide();
+            dlg.hide();
+        });
+        dlg.find(".close-btn").click(function () {
+            overlay.hide();
+            dlg.hide();
+        });
+        dlg.css("left", window.innerWidth / 2 - dlg.width() / 2).css("top", window.innerHeight / 2 - dlg.height() / 2).show();
+    }
+
     // Счетчик
-    setInterval(function() {
+    setInterval(function () {
         $(".counter").each(function (index, item) {
 
             function startAndEndOfWeek(date) {
@@ -126,18 +209,19 @@
             till = dates[1];
             var diff = (till.getTime() - now.getTime()) / 1000;
             var string = "";
-            var days, hours, minutes;
+            var days, hours, minutes, seconds;
             if (diff <= 0) {
                 days = "00";
                 hours = "00";
                 minutes = "00";
+                seconds = "00";
             } else {
                 days = Math.floor(diff / (3600 * 24));
                 var left = diff - days * 3600 * 24;
                 hours = Math.floor(left / (3600));
                 left = left - hours * (3600);
                 minutes = Math.floor(left / (60));
-                //var seconds = Math.floor(left - minutes * (60));
+                seconds = Math.floor(left - minutes * (60));
                 if (days < 10) {
                     days = "0" + days.toString();
                 } else if (days > 99) {
@@ -155,13 +239,19 @@
                 } else {
                     minutes = minutes.toString();
                 }
+                if (seconds < 10) {
+                    seconds = "0" + seconds.toString();
+                } else {
+                    seconds = seconds.toString();
+                }
             }
             $(item).find(".days").text(days);
             $(item).find(".hours").text(hours);
             $(item).find(".minutes").text(minutes);
+            $(item).find(".seconds").text(seconds);
         });
     }, 1000);
-    
+
 
     var doorsArray = [
         "/Content/photos/doors/small/1.jpg",
@@ -195,7 +285,7 @@
         var item2 = doorsArray[index2];
         var item3 = doorsArray[index3];
 
-        $("#doors-carousel").find(".li-left").find("img").attr("src", item1).attr("offset",index1);
+        $("#doors-carousel").find(".li-left").find("img").attr("src", item1).attr("offset", index1);
         $("#doors-carousel").find(".li-active").find("img").attr("src", item2).attr("offset", index1);
         $("#doors-carousel").find(".li-right").find("img").attr("src", item3).attr("offset", index1);
     }
@@ -221,7 +311,7 @@
     }
 
     bindCertificates();
-    
+
     $("#next-cert").click(function () {
         certOffset += 1;
         if (certOffset >= certsArray.length) {
@@ -238,7 +328,7 @@
         bindCertificates();
     });
     $("#cert-carousel img").click(function () {
-        $.fancybox.open(certsArray, {index: $(this).attr("offset")});
+        $.fancybox.open(certsArray, { index: $(this).attr("offset") });
     });
 </script>
 <!-- Yandex.Metrika counter -->
@@ -278,12 +368,16 @@
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="//mc.yandex.ru/watch/21868750" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div>
+        <img src="//mc.yandex.ru/watch/21868750" style="position: absolute; left: -9999px;" alt="" />
+    </div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
-@if ((string) Session["Admin"] == "true")
+@if ((string)Session["Admin"] == "true")
 {
     <script type="text/javascript">
-        $("body").on("click",".edit-content", function () {
+        $("body").on("click", ".edit-content", function () {
             var key = $(this).data("key");
             var item = $("[data-edit-key='" + key + "']");
             var currentContent = item.text();

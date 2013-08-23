@@ -176,6 +176,54 @@ namespace Octopus.Doors.Controllers
         }
 
         /// <summary>
+        /// Обрабатывает новый лид с формы обратной связи
+        /// </summary>
+        /// <param name="name">Имя пользователя</param>
+        /// <param name="phone">телефон</param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Callback(string name, string phone, string time)
+        {
+            // Получаем email куда отправлять
+            var targetEmail = System.Configuration.ConfigurationManager.AppSettings["feedbackEmail"];
+
+            // Подгатавливаем клиент и сообщение к отправке
+            var client = new SmtpClient()
+            {
+                EnableSsl = true,
+                Host = "smtp.gmail.com",
+                Port = 587,
+                Credentials = new NetworkCredential("tracker@trust-media.ru", "NetTracker"),
+                DeliveryMethod = SmtpDeliveryMethod.Network
+            };
+            var message = new MailMessage(new MailAddress("tracker@trust-media.ru","Сайт Двери-ДВ"), new MailAddress(targetEmail))
+            {
+                IsBodyHtml = true,
+                Subject = "Получен новый лид на сайте Двери-ДВ",
+                Body = String.Format("Получен новый лид - заказ звонка на сайте Двери-ДВ. Имя: {0}, телефон {1}, время для звонка: {2}.",name,phone,time)
+            };
+
+            try
+            {
+                client.Send(message);
+            }
+            catch (Exception e)
+            {
+                Response.StatusCode = 500;
+                return Json(new
+                {
+                    success = false,
+                    msg = e.Message
+                });
+            }
+
+            return Json(new
+            {
+                success = true
+            });
+        }
+
+        /// <summary>
         /// Отображает вход в админскую страницу
         /// </summary>
         /// <returns></returns>

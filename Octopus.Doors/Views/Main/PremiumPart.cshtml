@@ -3,46 +3,49 @@
 <div class="first-block-after-menu blue-green-gradient-block standart-door-header ajax-content">
 
     <div class="block-with-circle">
-
-        @* Дверь *@
-        <div class="door">
-            <img src="~/Content/photos/doors/premium/G47A_13_07_04608dR.jpg"  width="145" height="334"/>
-            <div class="images">
-                <div class="row1">
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04602d.jpg" index="0"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04605d.jpg" index="1"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04613d.jpg" index="2"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04622d.jpg" index="3"/>
+        <div style="position: relative">
+            @* Дверь *@
+            <div class="door">
+                <img src="~/Content/photos/doors/premium/G47A_13_07_04608dR.jpg" width="145" height="334" />
+                <div class="images">
+                    <div class="row1">
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04602d.jpg" index="0" />
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04605d.jpg" index="1" />
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04613d.jpg" index="2" />
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04622d.jpg" index="3" />
+                    </div>
+                    <div class="row2">
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04673d.jpg" index="4" />
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04693d.jpg" index="5" />
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04708d.jpg" index="6" />
+                        <img src="~/Content/photos/doors/premium/G47A_13_07_04713d.jpg" index="7">
+                    </div>
                 </div>
-                <div class="row2">
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04673d.jpg" index="4"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04693d.jpg" index="5"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04708d.jpg" index="6"/>
-                    <img src="~/Content/photos/doors/premium/G47A_13_07_04713d.jpg" index="7">
+            </div>
+
+            @* Инфа о двери *@
+            <div class="door-info">
+                <div class="header">
+                    Витязь-Премиум
+                </div>
+                <div class="desc">
+                    Стальные двери Витязь-Премиум – это наивысший класс защиты от посягательств. По ГОСТ – это 4 класс защиты – наивысший. Эта дверь создана для тех, кто ценит безопасность, но и не забывает о красоте. 
+                <br />
+                    Витязь-Премиум изготавливается из стали 3 мм – для квартирных дверей это очень много – подобная сталь используется в дверях банковских хранилищ. А в дополнение к этому дверь комплектуется  замками с вертикальным запиранием  - Ваш дверь будет запираться ригелями во все 4 стороны.
+
                 </div>
             </div>
-        </div>
 
-        @* Инфа о двери *@
-        <div class="door-info">
-            <div class="header">
-                Витязь-Премиум
+            @* Форма *@
+            @Html.Partial("StandartForm")
+
+
+            @* Кнопка купить *@
+            <div class="buy-block premium">
+                <span class="buy-btn callback">Купить
+                </span>
             </div>
-            <div class="desc">
-                Стальные двери Витязь-Премиум - созданы специально для людей, у которых очень много лишнего бабла, которое им некуда девать.
-            </div>
         </div>
-
-        @* Форма *@
-        @Html.Partial("StandartForm")
-
-
-        @* Кнопка купить *@
-        <div class="buy-block">
-            <span class="buy-btn">Купить
-            </span>
-        </div>
-
     </div>
     <div class="border-bottom"></div>
 </div>
@@ -57,20 +60,28 @@
         </div>
         <ul class="benefits-list">
             <li class="benefits-list-item">
-                <img src="/Content/img/doors-icon1.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
-            </li>
-            <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon2.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">
+                    <span style="font-weight: bold">3 мм толщина стали </span>– дверь сейфового типа, вскрыть такую можно только специальными инструментами, которые есть лишь у спасателей.
+                </span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon3.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">
+                    <span style="font-weight: bold">3 противосъемных штыря </span>– Вашу дверь от спиливания петель.
+                </span>
             </li>
             <li class="benefits-list-item">
                 <img src="/Content/img/doors-icon4.png" />
-                <span class="benefit-title">Открываются тихо и плавно</span>
+                <span class="benefit-title">
+                    <span style="font-weight: bold">2 замка Гардина с вертикальным запиранием</span> – ригеля-распорки будут закрывать Вашу дверь во 4 стороны, а это значит, что сломать ее силовыми методами не возможно.
+                </span>
+            </li>
+            <li class="benefits-list-item">
+                <img src="/Content/img/doors-icon1.png" />
+                <span class="benefit-title">
+                    <span style="font-weight: bold">1 замок с перекодировкой  </span>– а это значит, что если Вы потеряете ключи, Вам не нужно менять всю дверь или весь замок. Вы сможете сами перекодировать двери на новый комплект ключей, лишь позвонив нам.
+                </span>
             </li>
         </ul>
 
@@ -95,6 +106,10 @@
                 imgs.push($(this).attr("src"));
             });
             $.fancybox.open(imgs, { index: $(this).attr("index") });
+        });
+        $(".callback").bind("click", function () {
+            showCallbackDlg();
+            return false;
         });
     });
 </script>

@@ -43,21 +43,22 @@
 
             <div class="wrap-benefits inline">
                 <ul class="benefits-list">
-                    <li class="benefits-list-item">
+                    
+                    <li class="benefits-list-item" style="visibility: hidden">
                         <img src="/Content/img/doors-icon1.png" />
-                        <span class="benefit-title editable" data-edit-key="benefit1">Открываются тихо и плавно</span>
+                        <span class="benefit-title editable" data-edit-key="benefit1">Открываются тихо и плавно, скрип и заедания - в прошлом.</span>
                     </li>
                     <li class="benefits-list-item">
                         <img src="/Content/img/doors-icon2.png" />
-                        <span class="benefit-title editable" data-edit-key="benefit2">Открываются тихо и плавно</span>
+                        <span class="benefit-title editable" data-edit-key="benefit2">Качественные материалы - никакого запаха.</span>
                     </li>
                     <li class="benefits-list-item">
                         <img src="/Content/img/doors-icon3.png" />
-                        <span class="benefit-title editable" data-edit-key="benefit3">Открываются тихо и плавно</span>
+                        <span class="benefit-title editable" data-edit-key="benefit3">Аккуратная работа с металлом - никаких острых углов и заусенцев.</span>
                     </li>
                     <li class="benefits-list-item">
                         <img src="/Content/img/doors-icon4.png" />
-                        <span class="benefit-title editable" data-edit-key="benefit4">Открываются тихо и плавно</span>
+                        <span class="benefit-title editable" data-edit-key="benefit4">Их действительно сложно взломать.</span>
                     </li>
                 </ul>
             </div>
@@ -66,7 +67,9 @@
         <div class="first-block-after-menu-form inline">
 
             <div class="btn btn-counter wrap-inline">
-
+                <div style="text-align: center; margin: 10px; font-weight: bold; font-size: 20px; letter-spacing: 1px">
+                    Старая цена вернется через
+                </div>
                 @Html.Partial("Counter")
 
             </div>
@@ -75,14 +78,7 @@
                 <div class="wrap-form">
                     <h2 class="red-text editable" data-edit-key="actionTitle">Выгодные условия!</h2>
                     <span class="text">Запишитесь на бесплатный
-                        <br />
-                        замер сегодня - и монтаж мы сможем
-                        <br />
-                        сделать завтра. А оплатить Вы сможете
-                        <br />
-                        после монтажа.
-                        <br />
-                        ОСТАВЬТЕ ЗАЯВКУ НА ЗАМЕР:
+                        Успей заказать двери по выгодной! Оставив заявку сейчас, вы экономите 5 600 руб.
                     </span>
 
                     <form class="form-order" action="/Main/Lead" method="POST">
