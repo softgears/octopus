@@ -231,6 +231,8 @@
     <Content Include="Content\img\standart\guarantee.png" />
     <Content Include="Content\img\standart\image-bg.png" />
     <Content Include="Content\img\standart\price.png" />
+    <Content Include="Content\img\standart\price2.png" />
+    <Content Include="Content\img\standart\price3.png" />
     <Content Include="Content\img\twitter.png" />
     <Content Include="Content\img\Untitled-8.png" />
     <Content Include="Content\img\Untitled-9.png" />
@@ -331,7 +333,7 @@
     <Content Include="Views\Main\FireProof.cshtml" />
     <Content Include="Views\Main\Articles.cshtml" />
     <Content Include="Views\Main\About.cshtml" />
-    <Content Include="Views\Main\Counter.cshtml" />
+    <Content Include="Views\Shared\Counter.cshtml" />
     <Content Include="Views\Main\Admin.cshtml" />
     <Content Include="Views\Main\AdminControl.cshtml" />
   </ItemGroup>

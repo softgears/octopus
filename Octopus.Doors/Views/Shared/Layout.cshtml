@@ -208,7 +208,6 @@
                         <img src="/Content/img/logos/logo0051.jpg" class="carousel-item" />
                         <img src="/Content/img/logos/logo0061.jpg" class="carousel-item" />
                         <img src="/Content/img/logos/logo0071.jpg" class="carousel-item" />
-                        <img src="/Content/img/logos/logo0091.jpg" class="carousel-item" />
                         <img src="/Content/img/logos/logo0101.jpg" class="carousel-item" />
                         <img src="/Content/img/logos/logo0111.jpg" class="carousel-item carouse-item-last" />
                     </div>
@@ -253,7 +252,9 @@
             <div class="first-block-after-menu-form inline">
 
                 <div class="btn btn-counter wrap-inline">
-
+                    <div style="text-align: center; margin: 10px; font-weight: bold; font-size: 20px; letter-spacing: 1px">
+                        Старая цена вернется через:
+                    </div>
                     @Html.Partial("Counter")
 
                 </div>
@@ -261,15 +262,16 @@
                 <div class="form-border">
                     <div class="wrap-form">
                         <h2 class="red-text">Снижение цен!</h2>
-                        <span class="text">Оставьте заявку на замер сегодня, и готовую дверь Вы получите завтра. <br/>
+                        <span class="text">Оставьте заявку на замер сегодня, и готовую дверь Вы получите завтра.
+                            <br />
                             Для записи на замер заполните поля ниже:
                         </span>
 
                         <form class="form-order" action="/Main/Lead" method="POST">
-                            <label>Ваше Имя</label><br />
+                            <label>Ваше Имя:</label><br />
                             <input val="" type="text" name="name" />
                             <br />
-                            <label>Контактный телефон</label><br />
+                            <label>Контактный телефон:</label><br />
                             <input val="" type="text" name="phone" />
                         </form>
 

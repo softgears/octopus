@@ -32,7 +32,7 @@
       <file leaf-file-name="screen.sass" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1020" column="85" selection-start="17286" selection-end="17286" vertical-scroll-proportion="0.55212355">
+            <state line="1342" column="27" selection-start="22555" selection-end="22555" vertical-scroll-proportion="0.6061776">
               <folding />
             </state>
           </provider>
@@ -84,7 +84,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -105,10 +104,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Проекты Траст медии/trust/TransTrek/TransTrek.Web" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -304,7 +305,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/sass/screen.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1020" column="85" selection-start="17286" selection-end="17286" vertical-scroll-proportion="0.55212355">
+        <state line="1342" column="27" selection-start="22555" selection-end="22555" vertical-scroll-proportion="0.6061776">
           <folding />
         </state>
       </provider>
